@@ -12,6 +12,11 @@
 		1AE0B41722A328A800CB2B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE0B41522A328A800CB2B98 /* Main.storyboard */; };
 		1AE0B41922A328AB00CB2B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AE0B41822A328AB00CB2B98 /* Assets.xcassets */; };
 		1AE0B41C22A328AB00CB2B98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE0B41A22A328AB00CB2B98 /* LaunchScreen.storyboard */; };
+		1AE0B42E22A3314F00CB2B98 /* GetPedestrianCounterLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B42D22A3314F00CB2B98 /* GetPedestrianCounterLocations.swift */; };
+		1AE0B43122A3319F00CB2B98 /* PedestrianCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B43022A3319F00CB2B98 /* PedestrianCounter.swift */; };
+		1AE0B43422A334BF00CB2B98 /* PedestrianCounterLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B43322A334BF00CB2B98 /* PedestrianCounterLocationResponse.swift */; };
+		1AE0B43622A335C700CB2B98 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B43522A335C700CB2B98 /* APIEndpoint.swift */; };
+		1AE0B43822A3362700CB2B98 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B43722A3362700CB2B98 /* APIRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		1AE0B41822A328AB00CB2B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AE0B41B22A328AB00CB2B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1AE0B41D22A328AB00CB2B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AE0B42D22A3314F00CB2B98 /* GetPedestrianCounterLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPedestrianCounterLocations.swift; sourceTree = "<group>"; };
+		1AE0B43022A3319F00CB2B98 /* PedestrianCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedestrianCounter.swift; sourceTree = "<group>"; };
+		1AE0B43322A334BF00CB2B98 /* PedestrianCounterLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedestrianCounterLocationResponse.swift; sourceTree = "<group>"; };
+		1AE0B43522A335C700CB2B98 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		1AE0B43722A3362700CB2B98 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +78,53 @@
 		1AE0B42322A32E5500CB2B98 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				1AE0B42A22A3311300CB2B98 /* APIs */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		1AE0B42A22A3311300CB2B98 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				1AE0B43222A334A000CB2B98 /* Responses */,
+				1AE0B42F22A3318200CB2B98 /* Requests */,
+				1AE0B42C22A3312700CB2B98 /* Models */,
+				1AE0B42B22A3312100CB2B98 /* Clients */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		1AE0B42B22A3312100CB2B98 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				1AE0B43522A335C700CB2B98 /* APIEndpoint.swift */,
+				1AE0B43722A3362700CB2B98 /* APIRequest.swift */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		1AE0B42C22A3312700CB2B98 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1AE0B43022A3319F00CB2B98 /* PedestrianCounter.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1AE0B42F22A3318200CB2B98 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				1AE0B42D22A3314F00CB2B98 /* GetPedestrianCounterLocations.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		1AE0B43222A334A000CB2B98 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				1AE0B43322A334BF00CB2B98 /* PedestrianCounterLocationResponse.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,7 +199,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AE0B41422A328A800CB2B98 /* ViewController.swift in Sources */,
+				1AE0B43622A335C700CB2B98 /* APIEndpoint.swift in Sources */,
+				1AE0B43422A334BF00CB2B98 /* PedestrianCounterLocationResponse.swift in Sources */,
+				1AE0B43122A3319F00CB2B98 /* PedestrianCounter.swift in Sources */,
 				1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */,
+				1AE0B43822A3362700CB2B98 /* APIRequest.swift in Sources */,
+				1AE0B42E22A3314F00CB2B98 /* GetPedestrianCounterLocations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

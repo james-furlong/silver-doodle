@@ -16,10 +16,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mapView.showsUserLocation = true
+        
+        let locations = getSensorLocations()
+        addLocationsToMap(with: locations)
         
         self.locationManager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled() {
@@ -35,13 +39,34 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let initialLocation = locationManager.location
         centerMapOnLocation(location: initialLocation)
     }
-
     
     func centerMapOnLocation(location: CLLocation?) {
         let regionRadius: CLLocationDistance = 1000
         guard let location = location else { return }
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func getSensorLocations() -> [PedestrianCounter] {
+        var locationArray: [PedestrianCounter] = [PedestrianCounter]()
+        
+        GetPedestrianCounterLocations()
+            .dispatch(
+                onSuccess: { successResponse in
+                    locationArray = successResponse
+            },
+                onFailure: { errorResponse, error in
+                    print(error.localizedDescription)
+            })
+        
+        return locationArray
+    }
+    
+    func addLocationsToMap(with data: [PedestrianCounter]) {
+        var locationArray = [Location]()
+        for counter in data {
+            locationArray.append(counter.location)
+        }
     }
 
 }
