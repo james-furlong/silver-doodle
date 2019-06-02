@@ -17,6 +17,7 @@
 		1AE0B43422A334BF00CB2B98 /* PedestrianCounterLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B43322A334BF00CB2B98 /* PedestrianCounterLocationResponse.swift */; };
 		1AE0B43622A335C700CB2B98 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B43522A335C700CB2B98 /* APIEndpoint.swift */; };
 		1AE0B43822A3362700CB2B98 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B43722A3362700CB2B98 /* APIRequest.swift */; };
+		1AE0B43A22A47CE000CB2B98 /* PedestrianCounterAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B43922A47CE000CB2B98 /* PedestrianCounterAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1AE0B43322A334BF00CB2B98 /* PedestrianCounterLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedestrianCounterLocationResponse.swift; sourceTree = "<group>"; };
 		1AE0B43522A335C700CB2B98 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		1AE0B43722A3362700CB2B98 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		1AE0B43922A47CE000CB2B98 /* PedestrianCounterAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedestrianCounterAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				1AE0B43022A3319F00CB2B98 /* PedestrianCounter.swift */,
+				1AE0B43922A47CE000CB2B98 /* PedestrianCounterAnnotation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			files = (
 				1AE0B41422A328A800CB2B98 /* ViewController.swift in Sources */,
 				1AE0B43622A335C700CB2B98 /* APIEndpoint.swift in Sources */,
+				1AE0B43A22A47CE000CB2B98 /* PedestrianCounterAnnotation.swift in Sources */,
 				1AE0B43422A334BF00CB2B98 /* PedestrianCounterLocationResponse.swift in Sources */,
 				1AE0B43122A3319F00CB2B98 /* PedestrianCounter.swift in Sources */,
 				1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */,

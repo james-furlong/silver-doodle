@@ -23,7 +23,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         mapView.showsUserLocation = true
         
         let locations = getSensorLocations()
-        addLocationsToMap(with: locations)
+//        addLocationsToMap(with: locations)
         
         self.locationManager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled() {
@@ -53,6 +53,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         GetPedestrianCounterLocations()
             .dispatch(
                 onSuccess: { successResponse in
+                    self.addLocationsToMap(with: successResponse)
                     locationArray = successResponse
             },
                 onFailure: { errorResponse, error in
@@ -63,11 +64,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func addLocationsToMap(with data: [PedestrianCounter]) {
-        var locationArray = [Location]()
         for counter in data {
-            locationArray.append(counter.location)
+            let lat = Double(counter.latitude) ?? 0.00
+            let long = Double(counter.longitude) ?? 0.00
+            let location = CLLocationCoordinate2DMake(lat, long)
+            mapView.addAnnotation(
+                PedestrianCounterAnnotation(
+                    title: counter.sensorName,
+                    locationDescription: counter.sensorDescription,
+                    coordinate: location
+                )
+            )
         }
     }
-
 }
-
