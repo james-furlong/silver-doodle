@@ -23,7 +23,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         mapView.showsUserLocation = true
         mapView.delegate = self
         
-        getSensorLocations()
+//        getSensorLocations()
         getLightLocations()
         
         self.locationManager.requestWhenInUseAuthorization()
@@ -62,11 +62,40 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         GetStreetLights()
             .dispatch(
                 onSuccess: { successResponse in
-                    print(successResponse)
+                    self.createSensorLocations(from: lights, and: successResponse)
             },
                 onError: { errorResponse, error in
                     print(error.localizedDescription)
             })
+    }
+    
+    func createSensorLocations(from featured: FeatureLightingResponse, and street: StreetLightingResponse) {
+        var lightLocationArray = [LightLocation]()
+        
+        featured.forEach { light in
+            let location = LightLocation(
+                latitude: Double(light.lat) ?? 0.00,
+                longitude: Double(light.lon) ?? 0.00,
+                title: light.assetDescription,
+                luminosity: Int(light.lampRatingW ?? "0") ?? 0,
+                id: light.assetNumber
+            )
+            lightLocationArray.append(location)
+        }
+        
+        street.forEach { light in
+            let location = LightLocation(
+                latitude: light.theGeom.coordinates[0],
+                longitude: light.theGeom.coordinates[1],
+                title: light.name,
+                subtitle: light.label,
+                luminosity: 80,
+                id: light.strID
+            )
+            lightLocationArray.append(location)
+        }
+        
+        print(lightLocationArray)
     }
     
     func getSensorLocations() {
