@@ -22,8 +22,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         mapView.showsUserLocation = true
         
-        let locations = getSensorLocations()
-//        addLocationsToMap(with: locations)
+        getSensorLocations()
         
         self.locationManager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled() {
@@ -47,34 +46,43 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-    func getSensorLocations() -> [PedestrianCounter] {
-        var locationArray: [PedestrianCounter] = [PedestrianCounter]()
-        
+    func getSensorLocations() {
         GetPedestrianCounterLocations()
             .dispatch(
                 onSuccess: { successResponse in
-                    self.addLocationsToMap(with: successResponse)
-                    locationArray = successResponse
+                    self.getSensorFigures(with: successResponse)
             },
                 onFailure: { errorResponse, error in
                     print(error.localizedDescription)
             })
-        
-        return locationArray
     }
     
     func addLocationsToMap(with data: [PedestrianCounter]) {
-        for counter in data {
-            let lat = Double(counter.latitude) ?? 0.00
-            let long = Double(counter.longitude) ?? 0.00
-            let location = CLLocationCoordinate2DMake(lat, long)
-            mapView.addAnnotation(
-                PedestrianCounterAnnotation(
-                    title: counter.sensorName,
-                    locationDescription: counter.sensorDescription,
-                    coordinate: location
-                )
-            )
+        data.forEach { counter in
+            mapView.addAnnotation(counter.location)
         }
+    }
+    
+    func createCounters(from locations: PedestrianCounterLocationResponse, and data: PedestrianCounterResponse) -> [PedestrianCounter]{
+        var counterArray = [PedestrianCounter]()
+        
+        locations.forEach { location in
+            guard let stats = data.first(where: { $0.sensorID == location.sensorID }) else { return }
+            let counter = PedestrianCounter(location: location, counter: stats)
+            counterArray.append(counter)
+        }
+        return counterArray
+    }
+    
+    func getSensorFigures(with data: PedestrianCounterLocationResponse) {
+        GetPedestrianCount()
+            .dispatch(
+                onSuccess: { successResponse in
+                    let counters = self.createCounters(from: data, and: successResponse)
+                    self.addLocationsToMap(with: counters)
+            },
+                onError: { errorResponse, error in
+                    print(error.localizedDescription)
+            })
     }
 }

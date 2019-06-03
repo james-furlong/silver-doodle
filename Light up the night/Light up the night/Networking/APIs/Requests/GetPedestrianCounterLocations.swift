@@ -15,7 +15,7 @@ struct GetPedestrianCounterLocations: APIEndpoint, Codable {
     }
     
     func dispatch(
-        onSuccess successHandler: @escaping ((_: [PedestrianCounter]) -> Void),
+        onSuccess successHandler: @escaping ((_: PedestrianCounterLocationResponse) -> Void),
         onFailure failureHandler: @escaping ((_: APIRequest.ErrorResponse?, _: Error) -> Void)
     ) {
         APIRequest.get(

@@ -1,40 +1,50 @@
 //
-//  PedestrianCounterLocation.swift
+//  PedestrianCounter.swift
 //  Light up the night
 //
-//  Created by James Furlong on 2/6/19.
+//  Created by James Furlong on 3/6/19.
 //  Copyright © 2019 Archa. All rights reserved.
 //
 
 import Foundation
+import MapKit
 
-// MARK: - Pedestrian Counter
-
-struct PedestrianCounter: Codable {
-    let sensorID, sensorDescription, sensorName, installationDate: String
-    let direction2, direction1: String?
-    let longitude, status, latitude: String
+class PedestrianCounter {
+    let id: Int
+    let title: String?
+    let status: String
+    let date: Date
+    let direction1: String?
+    let direction1Count: Int
+    let direction2: String?
+    let direction2Count: Int
+    let totalCount: Int
+    let counterDescription: String
+    let longitude: Double
+    let latitude: Double
     let location: Location
     
-    enum CodingKeys: String, CodingKey {
-        case sensorID = "sensor_id"
-        case sensorDescription = "sensor_description"
-        case sensorName = "sensor_name"
-        case installationDate = "installation_date"
-        case status
-        case direction1 = "direction_1"
-        case direction2 = "direction_2"
-        case latitude, longitude, location
+    init(location: PedestrianCounterLocationResponseElement, counter: PedestrianCounterResponseElement) {
+        self.id = Int(location.sensorID) ?? 0
+        self.title = location.sensorName
+        self.status = location.status
+        self.date = {
+            let df = DateFormatter()
+            df.dateFormat = "yyyy-MM-dd hh:mm:ss a"
+            return df.date(from: counter.dateTime) ?? Date()
+        }()
+        self.direction1 = location.direction1
+        self.direction1Count = Int(counter.direction1) ?? 0
+        self.direction2 = location.direction2
+        self.direction2Count = Int(counter.direction2) ?? 0
+        self.totalCount = Int(counter.totalOfDirections) ?? 0
+        self.counterDescription = location.sensorDescription
+        self.longitude = Double(location.longitude) ?? 0.00
+        self.latitude = Double(location.latitude) ?? 0.00
+        self.location = Location(latitude: latitude, longitude: longitude, title: title, count: totalCount)
     }
-}
-
-// MARK: - Location
-
-struct Location: Codable {
-    let latitude, longitude, humanAddress: String
     
-    enum CodingKeys: String, CodingKey {
-        case latitude, longitude
-        case humanAddress = "human_address"
+    var subtitle: String? {
+        return counterDescription
     }
 }

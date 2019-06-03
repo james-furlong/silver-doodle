@@ -13,11 +13,14 @@
 		1AE0B41922A328AB00CB2B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AE0B41822A328AB00CB2B98 /* Assets.xcassets */; };
 		1AE0B41C22A328AB00CB2B98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE0B41A22A328AB00CB2B98 /* LaunchScreen.storyboard */; };
 		1AE0B42E22A3314F00CB2B98 /* GetPedestrianCounterLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B42D22A3314F00CB2B98 /* GetPedestrianCounterLocations.swift */; };
-		1AE0B43122A3319F00CB2B98 /* PedestrianCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B43022A3319F00CB2B98 /* PedestrianCounter.swift */; };
-		1AE0B43422A334BF00CB2B98 /* PedestrianCounterLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B43322A334BF00CB2B98 /* PedestrianCounterLocationResponse.swift */; };
+		1AE0B43122A3319F00CB2B98 /* PedestrianCounterLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B43022A3319F00CB2B98 /* PedestrianCounterLocationResponse.swift */; };
 		1AE0B43622A335C700CB2B98 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B43522A335C700CB2B98 /* APIEndpoint.swift */; };
 		1AE0B43822A3362700CB2B98 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B43722A3362700CB2B98 /* APIRequest.swift */; };
 		1AE0B43A22A47CE000CB2B98 /* PedestrianCounterAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B43922A47CE000CB2B98 /* PedestrianCounterAnnotation.swift */; };
+		1AE0B43C22A4812800CB2B98 /* PedestrianCounterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B43B22A4812800CB2B98 /* PedestrianCounterResponse.swift */; };
+		1AE0B43E22A4820100CB2B98 /* GetPedestrianCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B43D22A4820100CB2B98 /* GetPedestrianCount.swift */; };
+		1AE0B44022A485F300CB2B98 /* PedestrianCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B43F22A485F300CB2B98 /* PedestrianCounter.swift */; };
+		1AE0B44222A48DF300CB2B98 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B44122A48DF300CB2B98 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +32,14 @@
 		1AE0B41B22A328AB00CB2B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1AE0B41D22A328AB00CB2B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AE0B42D22A3314F00CB2B98 /* GetPedestrianCounterLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPedestrianCounterLocations.swift; sourceTree = "<group>"; };
-		1AE0B43022A3319F00CB2B98 /* PedestrianCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedestrianCounter.swift; sourceTree = "<group>"; };
-		1AE0B43322A334BF00CB2B98 /* PedestrianCounterLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedestrianCounterLocationResponse.swift; sourceTree = "<group>"; };
+		1AE0B43022A3319F00CB2B98 /* PedestrianCounterLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedestrianCounterLocationResponse.swift; sourceTree = "<group>"; };
 		1AE0B43522A335C700CB2B98 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		1AE0B43722A3362700CB2B98 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		1AE0B43922A47CE000CB2B98 /* PedestrianCounterAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedestrianCounterAnnotation.swift; sourceTree = "<group>"; };
+		1AE0B43B22A4812800CB2B98 /* PedestrianCounterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedestrianCounterResponse.swift; sourceTree = "<group>"; };
+		1AE0B43D22A4820100CB2B98 /* GetPedestrianCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPedestrianCount.swift; sourceTree = "<group>"; };
+		1AE0B43F22A485F300CB2B98 /* PedestrianCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedestrianCounter.swift; sourceTree = "<group>"; };
+		1AE0B44122A48DF300CB2B98 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +114,9 @@
 		1AE0B42C22A3312700CB2B98 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1AE0B43022A3319F00CB2B98 /* PedestrianCounter.swift */,
 				1AE0B43922A47CE000CB2B98 /* PedestrianCounterAnnotation.swift */,
+				1AE0B43F22A485F300CB2B98 /* PedestrianCounter.swift */,
+				1AE0B44122A48DF300CB2B98 /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -118,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				1AE0B42D22A3314F00CB2B98 /* GetPedestrianCounterLocations.swift */,
+				1AE0B43D22A4820100CB2B98 /* GetPedestrianCount.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -125,7 +133,8 @@
 		1AE0B43222A334A000CB2B98 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
-				1AE0B43322A334BF00CB2B98 /* PedestrianCounterLocationResponse.swift */,
+				1AE0B43B22A4812800CB2B98 /* PedestrianCounterResponse.swift */,
+				1AE0B43022A3319F00CB2B98 /* PedestrianCounterLocationResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -202,13 +211,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AE0B41422A328A800CB2B98 /* ViewController.swift in Sources */,
+				1AE0B44222A48DF300CB2B98 /* Location.swift in Sources */,
 				1AE0B43622A335C700CB2B98 /* APIEndpoint.swift in Sources */,
+				1AE0B43C22A4812800CB2B98 /* PedestrianCounterResponse.swift in Sources */,
 				1AE0B43A22A47CE000CB2B98 /* PedestrianCounterAnnotation.swift in Sources */,
-				1AE0B43422A334BF00CB2B98 /* PedestrianCounterLocationResponse.swift in Sources */,
-				1AE0B43122A3319F00CB2B98 /* PedestrianCounter.swift in Sources */,
+				1AE0B43122A3319F00CB2B98 /* PedestrianCounterLocationResponse.swift in Sources */,
 				1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */,
 				1AE0B43822A3362700CB2B98 /* APIRequest.swift in Sources */,
 				1AE0B42E22A3314F00CB2B98 /* GetPedestrianCounterLocations.swift in Sources */,
+				1AE0B43E22A4820100CB2B98 /* GetPedestrianCount.swift in Sources */,
+				1AE0B44022A485F300CB2B98 /* PedestrianCounter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
