@@ -24,6 +24,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         mapView.delegate = self
         
         getSensorLocations()
+        getLightLocations()
         
         self.locationManager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled() {
@@ -45,6 +46,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         guard let location = location else { return }
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func getLightLocations() {
+        GetFeatureLights()
+            .dispatch(
+                onSuccess: { successResponse in
+                    self.getStreetLights(with: successResponse)
+            }, onError: { errorResponse, error in
+                print(error.localizedDescription)
+            })
+    }
+    
+    func getStreetLights(with lights: FeatureLightingResponse) {
+        GetStreetLights()
+            .dispatch(
+                onSuccess: { successResponse in
+                    print(successResponse)
+            },
+                onError: { errorResponse, error in
+                    print(error.localizedDescription)
+            })
     }
     
     func getSensorLocations() {

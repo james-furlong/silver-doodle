@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A543F2E22A585FA008EF90B /* FeatureLightingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F2D22A585FA008EF90B /* FeatureLightingResponse.swift */; };
+		1A543F3022A58A6A008EF90B /* GetFeatureLights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F2F22A58A6A008EF90B /* GetFeatureLights.swift */; };
+		1A543F3222A58D31008EF90B /* StreetLightsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F3122A58D31008EF90B /* StreetLightsResponse.swift */; };
+		1A543F3422A58D62008EF90B /* GetStreetLights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F3322A58D62008EF90B /* GetStreetLights.swift */; };
 		1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41122A328A800CB2B98 /* AppDelegate.swift */; };
 		1AE0B41422A328A800CB2B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41322A328A800CB2B98 /* ViewController.swift */; };
 		1AE0B41722A328A800CB2B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE0B41522A328A800CB2B98 /* Main.storyboard */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A543F2D22A585FA008EF90B /* FeatureLightingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureLightingResponse.swift; sourceTree = "<group>"; };
+		1A543F2F22A58A6A008EF90B /* GetFeatureLights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFeatureLights.swift; sourceTree = "<group>"; };
+		1A543F3122A58D31008EF90B /* StreetLightsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetLightsResponse.swift; sourceTree = "<group>"; };
+		1A543F3322A58D62008EF90B /* GetStreetLights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStreetLights.swift; sourceTree = "<group>"; };
 		1AE0B40E22A328A800CB2B98 /* Light up the night.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light up the night.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE0B41122A328A800CB2B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AE0B41322A328A800CB2B98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +134,8 @@
 			children = (
 				1AE0B42D22A3314F00CB2B98 /* GetPedestrianCounterLocations.swift */,
 				1AE0B43D22A4820100CB2B98 /* GetPedestrianCount.swift */,
+				1A543F2F22A58A6A008EF90B /* GetFeatureLights.swift */,
+				1A543F3322A58D62008EF90B /* GetStreetLights.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -135,6 +145,8 @@
 			children = (
 				1AE0B43B22A4812800CB2B98 /* PedestrianCounterResponse.swift */,
 				1AE0B43022A3319F00CB2B98 /* PedestrianCounterLocationResponse.swift */,
+				1A543F2D22A585FA008EF90B /* FeatureLightingResponse.swift */,
+				1A543F3122A58D31008EF90B /* StreetLightsResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -212,12 +224,16 @@
 			files = (
 				1AE0B41422A328A800CB2B98 /* ViewController.swift in Sources */,
 				1AE0B44222A48DF300CB2B98 /* Location.swift in Sources */,
+				1A543F3422A58D62008EF90B /* GetStreetLights.swift in Sources */,
+				1A543F3022A58A6A008EF90B /* GetFeatureLights.swift in Sources */,
 				1AE0B43622A335C700CB2B98 /* APIEndpoint.swift in Sources */,
 				1AE0B43C22A4812800CB2B98 /* PedestrianCounterResponse.swift in Sources */,
 				1AE0B43A22A47CE000CB2B98 /* PedestrianCounterAnnotation.swift in Sources */,
+				1A543F2E22A585FA008EF90B /* FeatureLightingResponse.swift in Sources */,
 				1AE0B43122A3319F00CB2B98 /* PedestrianCounterLocationResponse.swift in Sources */,
 				1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */,
 				1AE0B43822A3362700CB2B98 /* APIRequest.swift in Sources */,
+				1A543F3222A58D31008EF90B /* StreetLightsResponse.swift in Sources */,
 				1AE0B42E22A3314F00CB2B98 /* GetPedestrianCounterLocations.swift in Sources */,
 				1AE0B43E22A4820100CB2B98 /* GetPedestrianCount.swift in Sources */,
 				1AE0B44022A485F300CB2B98 /* PedestrianCounter.swift in Sources */,
