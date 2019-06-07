@@ -12,6 +12,13 @@
 		1A543F3222A58D31008EF90B /* StreetLightsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F3122A58D31008EF90B /* StreetLightsResponse.swift */; };
 		1A543F3422A58D62008EF90B /* GetStreetLights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F3322A58D62008EF90B /* GetStreetLights.swift */; };
 		1A543F3622A5BCE9008EF90B /* LightLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F3522A5BCE9008EF90B /* LightLocation.swift */; };
+		1AB6B3B922A878EC0012F7D5 /* StreetLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3B822A878EC0012F7D5 /* StreetLight.swift */; };
+		1AB6B3BC22A87E7E0012F7D5 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3BB22A87E7E0012F7D5 /* UIView+Extensions.swift */; };
+		1AB6B3D522AAE2A40012F7D5 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3D422AAE2A40012F7D5 /* DashboardViewController.swift */; };
+		1AB6B3DA22AAE7910012F7D5 /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3D822AAE7910012F7D5 /* DashboardCollectionViewCell.swift */; };
+		1AB6B3DB22AAE7910012F7D5 /* DashboardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6B3D922AAE7910012F7D5 /* DashboardCollectionViewCell.xib */; };
+		1AB6B3DD22AAEA190012F7D5 /* DashboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3DC22AAEA190012F7D5 /* DashboardButton.swift */; };
+		1AB71CD122A72ADA00909561 /* NightLightOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */; };
 		1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41122A328A800CB2B98 /* AppDelegate.swift */; };
 		1AE0B41422A328A800CB2B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41322A328A800CB2B98 /* ViewController.swift */; };
 		1AE0B41722A328A800CB2B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE0B41522A328A800CB2B98 /* Main.storyboard */; };
@@ -34,6 +41,13 @@
 		1A543F3122A58D31008EF90B /* StreetLightsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetLightsResponse.swift; sourceTree = "<group>"; };
 		1A543F3322A58D62008EF90B /* GetStreetLights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStreetLights.swift; sourceTree = "<group>"; };
 		1A543F3522A5BCE9008EF90B /* LightLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightLocation.swift; sourceTree = "<group>"; };
+		1AB6B3B822A878EC0012F7D5 /* StreetLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetLight.swift; sourceTree = "<group>"; };
+		1AB6B3BB22A87E7E0012F7D5 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		1AB6B3D422AAE2A40012F7D5 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		1AB6B3D822AAE7910012F7D5 /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
+		1AB6B3D922AAE7910012F7D5 /* DashboardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardCollectionViewCell.xib; sourceTree = "<group>"; };
+		1AB6B3DC22AAEA190012F7D5 /* DashboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardButton.swift; sourceTree = "<group>"; };
+		1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightLightOverlay.swift; sourceTree = "<group>"; };
 		1AE0B40E22A328A800CB2B98 /* Light up the night.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light up the night.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE0B41122A328A800CB2B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AE0B41322A328A800CB2B98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +77,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AB6B3BA22A87E6E0012F7D5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1AB6B3BB22A87E7E0012F7D5 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1AB6B3D322AAE2860012F7D5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				1AB6B3D622AAE7520012F7D5 /* Dashboard */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		1AB6B3D622AAE7520012F7D5 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				1AB6B3D722AAE7690012F7D5 /* Views */,
+				1AB6B3D422AAE2A40012F7D5 /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		1AB6B3D722AAE7690012F7D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1AB6B3D822AAE7910012F7D5 /* DashboardCollectionViewCell.swift */,
+				1AB6B3D922AAE7910012F7D5 /* DashboardCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1AB71CCF22A72AB100909561 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */,
+				1AB6B3B822A878EC0012F7D5 /* StreetLight.swift */,
+				1AB6B3DC22AAEA190012F7D5 /* DashboardButton.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		1AE0B40522A328A800CB2B98 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +140,9 @@
 		1AE0B41022A328A800CB2B98 /* Light up the night */ = {
 			isa = PBXGroup;
 			children = (
+				1AB6B3D322AAE2860012F7D5 /* Screens */,
+				1AB6B3BA22A87E6E0012F7D5 /* Extensions */,
+				1AB71CCF22A72AB100909561 /* Classes */,
 				1AE0B42322A32E5500CB2B98 /* Networking */,
 				1AE0B41122A328A800CB2B98 /* AppDelegate.swift */,
 				1AE0B41322A328A800CB2B98 /* ViewController.swift */,
@@ -215,6 +276,7 @@
 				1AE0B41C22A328AB00CB2B98 /* LaunchScreen.storyboard in Resources */,
 				1AE0B41922A328AB00CB2B98 /* Assets.xcassets in Resources */,
 				1AE0B41722A328A800CB2B98 /* Main.storyboard in Resources */,
+				1AB6B3DB22AAE7910012F7D5 /* DashboardCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,18 +291,24 @@
 				1AE0B44222A48DF300CB2B98 /* Location.swift in Sources */,
 				1A543F3422A58D62008EF90B /* GetStreetLights.swift in Sources */,
 				1A543F3022A58A6A008EF90B /* GetFeatureLights.swift in Sources */,
+				1AB6B3DA22AAE7910012F7D5 /* DashboardCollectionViewCell.swift in Sources */,
 				1AE0B43622A335C700CB2B98 /* APIEndpoint.swift in Sources */,
+				1AB71CD122A72ADA00909561 /* NightLightOverlay.swift in Sources */,
 				1AE0B43C22A4812800CB2B98 /* PedestrianCounterResponse.swift in Sources */,
+				1AB6B3D522AAE2A40012F7D5 /* DashboardViewController.swift in Sources */,
+				1AB6B3DD22AAEA190012F7D5 /* DashboardButton.swift in Sources */,
 				1AE0B43A22A47CE000CB2B98 /* PedestrianCounterAnnotation.swift in Sources */,
 				1A543F2E22A585FA008EF90B /* FeatureLightingResponse.swift in Sources */,
 				1AE0B43122A3319F00CB2B98 /* PedestrianCounterLocationResponse.swift in Sources */,
 				1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */,
 				1AE0B43822A3362700CB2B98 /* APIRequest.swift in Sources */,
+				1AB6B3BC22A87E7E0012F7D5 /* UIView+Extensions.swift in Sources */,
 				1A543F3222A58D31008EF90B /* StreetLightsResponse.swift in Sources */,
 				1AE0B42E22A3314F00CB2B98 /* GetPedestrianCounterLocations.swift in Sources */,
 				1AE0B43E22A4820100CB2B98 /* GetPedestrianCount.swift in Sources */,
 				1AE0B44022A485F300CB2B98 /* PedestrianCounter.swift in Sources */,
 				1A543F3622A5BCE9008EF90B /* LightLocation.swift in Sources */,
+				1AB6B3B922A878EC0012F7D5 /* StreetLight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +464,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "au.com.archa.Light-up-the-night";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -414,7 +482,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "au.com.archa.Light-up-the-night";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

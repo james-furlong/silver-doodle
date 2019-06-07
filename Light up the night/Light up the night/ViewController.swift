@@ -15,14 +15,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
-    
+    var tileRenderer: MKTileOverlayRenderer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        loadMap()
         
         mapView.showsUserLocation = true
         mapView.delegate = self
-        
 //        getSensorLocations()
         getLightLocations()
         
@@ -32,21 +32,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
-        
-        loadMap()
     }
     
-    func loadMap() {
-        let initialLocation = locationManager.location
-        centerMapOnLocation(location: initialLocation)
-    }
+//    func loadMap() {
+//        let overlay = NightLightOverlay()
+//        overlay.canReplaceMapContent = true
+//        mapView.addOverlay(overlay, level: .aboveLabels)
+//        tileRenderer = MKTileOverlayRenderer(tileOverlay: overlay)
+//
+//        let initialLocation = locationManager.location
+//        centerMapOnLocation(location: initialLocation)
+//    }
     
-    func centerMapOnLocation(location: CLLocation?) {
-        let regionRadius: CLLocationDistance = 1000
-        guard let location = location else { return }
-        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-        mapView.setRegion(coordinateRegion, animated: true)
-    }
+//    func centerMapOnLocation(location: CLLocation?) {
+//        let regionRadius: CLLocationDistance = 1000
+//        guard let location = location else { return }
+//        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+//        mapView.setRegion(coordinateRegion, animated: true)
+//    }
     
     func getLightLocations() {
         GetFeatureLights()
@@ -95,6 +98,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             lightLocationArray.append(location)
         }
         
+        lightLocationArray.forEach { light in
+            mapView.addAnnotation(light)
+        }
+        
         print(lightLocationArray)
     }
     
@@ -131,11 +138,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             .dispatch(
                 onSuccess: { successResponse in
                     let counters = self.createCounters(from: data, and: successResponse)
-                    self.addLocationsToMap(with: counters)
+//                    self.addLocationsToMap(with: counters)
             },
                 onError: { errorResponse, error in
                     print(error.localizedDescription)
             })
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        return tileRenderer!
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -143,17 +154,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         guard let annotation = annotation as? Location else { return nil }
         
         let identifier = "marker"
-        var view: MKMarkerAnnotationView
+        var view: StreetLight
         
-        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView {
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? StreetLight {
             dequeuedView.annotation = annotation
             view = dequeuedView
         } else {
-            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view = StreetLight(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout = true
             view.calloutOffset = CGPoint(x: -5, y: 5)
             view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         }
+        
         return view
     }
 }

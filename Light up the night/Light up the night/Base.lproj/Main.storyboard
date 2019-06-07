@@ -10,33 +10,69 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Dashboard View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Light_up_the_night" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DashboardViewController" customModule="Light_up_the_night" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8PT-Pd-50n">
-                                <rect key="frame" x="0.0" y="44" width="414" height="668"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="712"/>
                             </mapView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lEV-lE-TSB">
+                                <rect key="frame" x="0.0" y="712" width="414" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ry2-z4-cax">
+                                    <size key="itemSize" width="120" height="120"/>
+                                    <size key="headerReferenceSize" width="20" height="0.0"/>
+                                    <size key="footerReferenceSize" width="20" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AdJ-vi-uE1">
+                                        <rect key="frame" x="20" y="15" width="120" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.87843137250000003" green="0.39607843139999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <size key="customSize" width="120" height="120"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="F2b-IG-JzN">
+                                    <rect key="frame" x="0.0" y="0.0" width="20" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ICb-Rl-6ro">
+                                    <rect key="frame" x="140" y="0.0" width="20" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                            </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8PT-Pd-50n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3sd-LC-j9m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lEV-lE-TSB" secondAttribute="trailing" id="BYv-a0-U13"/>
+                            <constraint firstItem="lEV-lE-TSB" firstAttribute="top" secondItem="8PT-Pd-50n" secondAttribute="bottom" id="C0h-Sk-0MM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8PT-Pd-50n" secondAttribute="trailing" id="H3O-BQ-0UX"/>
-                            <constraint firstItem="8PT-Pd-50n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w30-4u-wqM"/>
+                            <constraint firstItem="lEV-lE-TSB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kDU-Wa-w8F"/>
+                            <constraint firstItem="lEV-lE-TSB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uoC-DK-s5i"/>
+                            <constraint firstItem="8PT-Pd-50n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="w30-4u-wqM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8PT-Pd-50n" secondAttribute="bottom" constant="150" id="yPO-9T-jom"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="8PT-Pd-50n" id="zUY-Eu-Gfw"/>
+                        <outlet property="collectionView" destination="lEV-lE-TSB" id="p9y-3a-9yR"/>
+                        <outlet property="mapView" destination="8PT-Pd-50n" id="4Yp-Gg-BJY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
         </scene>
     </scenes>
 </document>
