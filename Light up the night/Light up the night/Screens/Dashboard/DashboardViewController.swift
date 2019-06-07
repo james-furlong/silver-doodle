@@ -39,6 +39,14 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         return .lightContent
     }
     
+    // MARK: - MapView
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        return tileRenderer!
+    }
+    
+    // MARK: - Collection View
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return DashboardButton.allCases.count
     }
@@ -52,6 +60,24 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        collectionView.cellForItem(at: indexPath)?.alpha = 0.5
+        
+        guard let cell = collectionView.cellForItem(at: indexPath) as? DashboardCollectionViewCell else { return }
+        guard let type: DashboardButton = DashboardButton(rawValue: cell.title.text?.lowercased() ?? "") else { return }
+        self.addToMap(type: type)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        collectionView.cellForItem(at: indexPath)?.alpha = 1
+        
+        guard let cell = collectionView.cellForItem(at: indexPath) as? DashboardCollectionViewCell else { return }
+        guard let type: DashboardButton = DashboardButton(rawValue: cell.title.text?.lowercased() ?? "") else { return }
+        self.removeFromMap(type: type)
+    }
+    
+    // MARK: - Functions
     
     func loadMap() {
         let overlay = NightLightOverlay()
@@ -70,7 +96,11 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        return tileRenderer!
+    func addToMap(type: DashboardButton) {
+        
+    }
+    
+    func removeFromMap(type: DashboardButton) {
+        
     }
 }

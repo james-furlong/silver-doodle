@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum DashboardButton: Int, Equatable, CaseIterable {
+enum DashboardButton: String, Equatable, CaseIterable {
     case taxi
     case police
     case cameras
