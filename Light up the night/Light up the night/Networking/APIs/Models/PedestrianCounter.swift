@@ -22,7 +22,7 @@ class PedestrianCounter {
     let counterDescription: String
     let longitude: Double
     let latitude: Double
-    let location: Location
+    let location: CounterLocation
     
     init(location: PedestrianCounterLocationResponseElement, counter: PedestrianCounterResponseElement) {
         self.id = Int(location.sensorID) ?? 0
@@ -41,7 +41,7 @@ class PedestrianCounter {
         self.counterDescription = location.sensorDescription
         self.longitude = Double(location.longitude) ?? 0.00
         self.latitude = Double(location.latitude) ?? 0.00
-        self.location = Location(latitude: latitude, longitude: longitude, title: title, count: totalCount)
+        self.location = CounterLocation(latitude: latitude, longitude: longitude, title: title, count: totalCount)
     }
     
     var subtitle: String? {

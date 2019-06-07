@@ -9,14 +9,16 @@
 import Foundation
 import MapKit
 
-class Location: NSObject, MKAnnotation {
+class CounterLocation: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
+    var id: String
     var title: String?
     var subtitle: String?
-    let count: Int?
+    var count: Int?
     
-    init(latitude: Double, longitude: Double, title: String?, count: Int?) {
+    init(latitude: Double, longitude: Double, id: String, title: String?, count: Int?) {
         self.coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+        self.id = id
         self.title = title
         self.count = count
     }

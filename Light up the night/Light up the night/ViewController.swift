@@ -151,7 +151,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
-        guard let annotation = annotation as? Location else { return nil }
+        guard let annotation = annotation as? CounterLocation else { return nil }
         
         let identifier = "marker"
         var view: StreetLight

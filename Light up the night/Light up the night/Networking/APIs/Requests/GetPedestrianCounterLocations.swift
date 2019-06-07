@@ -23,6 +23,5 @@ struct GetPedestrianCounterLocations: APIEndpoint, Codable {
             onSuccess: successHandler,
             onError: failureHandler
         )
-        
     }
 }

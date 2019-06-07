@@ -1,31 +1,31 @@
 //
-//  StreetLight.swift
+//  Point.swift
 //  Light up the night
 //
-//  Created by James Furlong on 6/6/19.
+//  Created by James Furlong on 8/6/19.
 //  Copyright © 2019 Archa. All rights reserved.
 //
 
 import Foundation
 import MapKit
 
-class StreetLight: MKAnnotationView {
+class Point: MKAnnotationView {
     
-    private let color: UIColor = #colorLiteral(red: 0.9861351848, green: 1, blue: 0, alpha: 1)
+    private static let maxSize: CGFloat = 4.0
     
-    override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
+    init(annotation: MKAnnotation?, reuseIdentifier: String?, type: DashboardButton) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         
         let imageView: UIView = {
             let view: UIView = UIView()
             view.translatesAutoresizingMaskIntoConstraints = false
-            view.backgroundColor = color
+            view.backgroundColor = type.backgroundColor
             view.frame.size = CGSize(
-                width: StreetLight.maxSize,
-                height: StreetLight.maxSize
+                width: Point.maxSize,
+                height: Point.maxSize
             )
-            view.layer.cornerRadius = StreetLight.maxSize / 2
-           
+            view.layer.cornerRadius = Point.maxSize / 2
+            
             return view
         }()
         

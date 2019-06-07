@@ -17,10 +17,13 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
     
     let locationManager = CLLocationManager()
     var tileRenderer: MKTileOverlayRenderer?
+    var dataValues: [String: [Point]] = [String: [Point]]()
     var buttonArray: [DashboardButton] = [DashboardButton]()
+    var counterArray = [CounterLocation]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        retrieveAndCacheData()
         loadMap()
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -79,6 +82,10 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
     
     // MARK: - Functions
     
+    func retrieveAndCacheData() {
+        
+    }
+    
     func loadMap() {
         let overlay = NightLightOverlay()
         overlay.canReplaceMapContent = true
@@ -96,11 +103,39 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-    func addToMap(type: DashboardButton) {
-        
+    func getCounterLocations() {
+        GetPedestrianCounterLocations().dispatch(
+            onSuccess: { successResponse in
+                successResponse.forEach { location in
+                    self.counterArray.append(CounterLocation(
+                        latitude: Double(location.latitude) ?? 0.0,
+                        longitude: Double(location.longitude) ?? 0.0,
+                        id: location.sensorID,
+                        title: location.sensorName,
+                        count: nil
+                    ))
+                }
+        },
+            onFailure: { errorResponse, error in
+                print("Error on counter locations: \(error.localizedDescription)")
+        })
     }
     
-    func removeFromMap(type: DashboardButton) {
+    func getCounterStats() {
+        GetPedestrianCount().dispatch(
+            onSuccess: { successResponse in
+                successResponse.forEach { counter in
+                    for location in self.counterArray where location.id == counter.sensorID {
+                        location.count = Int(counter.totalOfDirections)
+                    }
+                }
+        },
+            onError: { errorResponse, error in
+                print("Error on counter data: \(error.localizedDescription)")
+        })
+    }
+    
+    func getFeatureLights() {
         
     }
 }
