@@ -41,7 +41,7 @@ class PedestrianCounter {
         self.counterDescription = location.sensorDescription
         self.longitude = Double(location.longitude) ?? 0.00
         self.latitude = Double(location.latitude) ?? 0.00
-        self.location = CounterLocation(latitude: latitude, longitude: longitude, title: title, count: totalCount)
+        self.location = CounterLocation(latitude: latitude, longitude: longitude, id: "", title: title, count: totalCount)
     }
     
     var subtitle: String? {

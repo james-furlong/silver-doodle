@@ -21,6 +21,8 @@
 		1AB6B3DF22AB041A0012F7D5 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3DE22AB041A0012F7D5 /* Point.swift */; };
 		1AB6B3E222AB084B0012F7D5 /* ApiClientInjected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3E122AB084B0012F7D5 /* ApiClientInjected.swift */; };
 		1AB6B3E422AB08820012F7D5 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3E322AB08820012F7D5 /* ApiClient.swift */; };
+		1AB6B3E622AB5FA80012F7D5 /* TaxiRankResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3E522AB5FA80012F7D5 /* TaxiRankResponse.swift */; };
+		1AB6B3E822AB5FD80012F7D5 /* GetTaxiRankLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3E722AB5FD80012F7D5 /* GetTaxiRankLocations.swift */; };
 		1AB71CD122A72ADA00909561 /* NightLightOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */; };
 		1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41122A328A800CB2B98 /* AppDelegate.swift */; };
 		1AE0B41422A328A800CB2B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41322A328A800CB2B98 /* ViewController.swift */; };
@@ -53,6 +55,8 @@
 		1AB6B3DE22AB041A0012F7D5 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		1AB6B3E122AB084B0012F7D5 /* ApiClientInjected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientInjected.swift; sourceTree = "<group>"; };
 		1AB6B3E322AB08820012F7D5 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		1AB6B3E522AB5FA80012F7D5 /* TaxiRankResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiRankResponse.swift; sourceTree = "<group>"; };
+		1AB6B3E722AB5FD80012F7D5 /* GetTaxiRankLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTaxiRankLocations.swift; sourceTree = "<group>"; };
 		1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightLightOverlay.swift; sourceTree = "<group>"; };
 		1AE0B40E22A328A800CB2B98 /* Light up the night.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light up the night.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE0B41122A328A800CB2B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 				1AE0B43D22A4820100CB2B98 /* GetPedestrianCount.swift */,
 				1A543F2F22A58A6A008EF90B /* GetFeatureLights.swift */,
 				1A543F3322A58D62008EF90B /* GetStreetLights.swift */,
+				1AB6B3E722AB5FD80012F7D5 /* GetTaxiRankLocations.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				1AE0B43022A3319F00CB2B98 /* PedestrianCounterLocationResponse.swift */,
 				1A543F2D22A585FA008EF90B /* FeatureLightingResponse.swift */,
 				1A543F3122A58D31008EF90B /* StreetLightsResponse.swift */,
+				1AB6B3E522AB5FA80012F7D5 /* TaxiRankResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -328,6 +334,8 @@
 				1AE0B44022A485F300CB2B98 /* PedestrianCounter.swift in Sources */,
 				1A543F3622A5BCE9008EF90B /* LightLocation.swift in Sources */,
 				1AB6B3B922A878EC0012F7D5 /* StreetLight.swift in Sources */,
+				1AB6B3E822AB5FD80012F7D5 /* GetTaxiRankLocations.swift in Sources */,
+				1AB6B3E622AB5FA80012F7D5 /* TaxiRankResponse.swift in Sources */,
 				1AB6B3DF22AB041A0012F7D5 /* Point.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
