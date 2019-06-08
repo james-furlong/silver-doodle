@@ -1,0 +1,62 @@
+[
+    {
+        "id": "210073",
+        "name": "Melbourne East",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.967164,
+                -37.812582
+            ]
+        },
+        "loc_desc": "202 Bourke Street"
+    },
+    {
+        "id": "210547",
+        "name": "Melbourne West",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.951046,
+                -37.813719
+            ]
+        },
+        "loc_desc": "313 Spencer Street"
+    },
+    {
+        "id": "211387",
+        "name": "Melbourne North",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.954576,
+                -37.800266
+            ]
+        },
+        "loc_desc": "36 Wreckyn Street"
+    },
+    {
+        "id": "212564",
+        "name": "South Melbourne",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.959601,
+                -37.834881
+            ]
+        },
+        "loc_desc": "211 Bank Street"
+    },
+    {
+        "id": "210094",
+        "name": "Southbank",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.960950,
+                -37.828294
+            ]
+        },
+        "loc_desc": "66 Moray Street"
+    }
+]

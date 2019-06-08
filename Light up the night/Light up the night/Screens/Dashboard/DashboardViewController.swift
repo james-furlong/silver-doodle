@@ -23,8 +23,8 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        retrieveAndCacheData()
         loadMap()
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(
@@ -92,31 +92,9 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
     
     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
         collectionView.cellForItem(at: indexPath)?.alpha = 1
-        
-//        guard let cell = collectionView.cellForItem(at: indexPath) as? DashboardCollectionViewCell else { return }
-//        guard let type: DashboardButton = DashboardButton(rawValue: cell.title.text?.lowercased() ?? "") else { return }
-//        self.removeFromMap(type: type)
     }
     
     // MARK: - Functions
-    
-    func retrieveAndCacheData() {
-        
-    }
-    
-//    func addToMap(type: DashboardButton) {
-//        var points: [Point] = [Point]()
-//        switch type {
-//        case .lights: points = dataValues[DashboardButton.lights.title] ?? getLights()
-//        case .cameras: points = dataValues[DashboardButton.cameras.title] ?? getCameras()
-//        case .taxi: points = dataValues[DashboardButton.taxi.title] ?? getTaxiRanks()
-//        case .police: points = dataValues[DashboardButton.police.title] ?? getPoliceStations()
-//        }
-//
-//        points.forEach { point in
-//            self.mapView.addAnnotation(point)
-//        }
-//    }
     
     func addToMap(points: [Point]) {
         points.forEach { point in
@@ -269,6 +247,23 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
     }
     
     func getPoliceStations() {
-        
+        GetPoliceStations().dispatch(
+            onSuccess: { successResponse in
+                var pointArray = [Point]()
+                successResponse.forEach { station in
+                    pointArray.append(Point(
+                        groupId: DashboardButton.police,
+                        title: station.name,
+                        subtitle: station.locDesc,
+                        latitude: Double(station.theGeom.coordinates[1]),
+                        longitude: Double(station.theGeom.coordinates[0])
+                    ))
+                }
+                self.dataValues[DashboardButton.police.title] = pointArray
+                self.addToMap(points: self.dataValues[DashboardButton.police.title] ?? [Point]())
+        },
+            onError: { errorResponse, error in
+                print("Error on police stations: \(error.localizedDescription)")
+        })
     }
 }
