@@ -16,7 +16,7 @@ struct CameraResponseElement: Codable {
     
     enum CodingKeys: String, CodingKey {
         case ref
-        case name = "name"
+        case name
         case theGeom = "the_geom"
         case locDesc = "loc_desc"
     }

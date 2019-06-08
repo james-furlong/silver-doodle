@@ -359,8 +359,7 @@
         },
         "loc_desc": "Flinders Street & Elizabeth Street"
     },
-    [
-	{
+    {
         "ref": "61",
         "name": "Safe City Camera 61",
         "the_geom": {
@@ -696,6 +695,4 @@
         },
         "loc_desc": "Harbour ESP SE Corner West Wharf"
     }
-]
-
 ]

@@ -18,7 +18,7 @@
 		1AB6B3DA22AAE7910012F7D5 /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3D822AAE7910012F7D5 /* DashboardCollectionViewCell.swift */; };
 		1AB6B3DB22AAE7910012F7D5 /* DashboardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6B3D922AAE7910012F7D5 /* DashboardCollectionViewCell.xib */; };
 		1AB6B3DD22AAEA190012F7D5 /* DashboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3DC22AAEA190012F7D5 /* DashboardButton.swift */; };
-		1AB6B3DF22AB041A0012F7D5 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3DE22AB041A0012F7D5 /* Point.swift */; };
+		1AB6B3DF22AB041A0012F7D5 /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3DE22AB041A0012F7D5 /* PointView.swift */; };
 		1AB6B3E222AB084B0012F7D5 /* ApiClientInjected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3E122AB084B0012F7D5 /* ApiClientInjected.swift */; };
 		1AB6B3E422AB08820012F7D5 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3E322AB08820012F7D5 /* ApiClient.swift */; };
 		1AB6B3E622AB5FA80012F7D5 /* TaxiRankResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3E522AB5FA80012F7D5 /* TaxiRankResponse.swift */; };
@@ -28,6 +28,7 @@
 		1AB6B3EF22ABA7F50012F7D5 /* Safe_city_cameras.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6B3EC22ABA7F50012F7D5 /* Safe_city_cameras.json */; };
 		1AB6B3F122ABACC10012F7D5 /* GetCameras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3F022ABACC10012F7D5 /* GetCameras.swift */; };
 		1AB6B3F322ABAD360012F7D5 /* CameraResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3F222ABAD360012F7D5 /* CameraResponse.swift */; };
+		1AB6B3F522ABB7900012F7D5 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3F422ABB7900012F7D5 /* Point.swift */; };
 		1AB71CD122A72ADA00909561 /* NightLightOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */; };
 		1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41122A328A800CB2B98 /* AppDelegate.swift */; };
 		1AE0B41422A328A800CB2B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41322A328A800CB2B98 /* ViewController.swift */; };
@@ -57,7 +58,7 @@
 		1AB6B3D822AAE7910012F7D5 /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
 		1AB6B3D922AAE7910012F7D5 /* DashboardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardCollectionViewCell.xib; sourceTree = "<group>"; };
 		1AB6B3DC22AAEA190012F7D5 /* DashboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardButton.swift; sourceTree = "<group>"; };
-		1AB6B3DE22AB041A0012F7D5 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		1AB6B3DE22AB041A0012F7D5 /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
 		1AB6B3E122AB084B0012F7D5 /* ApiClientInjected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientInjected.swift; sourceTree = "<group>"; };
 		1AB6B3E322AB08820012F7D5 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		1AB6B3E522AB5FA80012F7D5 /* TaxiRankResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiRankResponse.swift; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		1AB6B3EC22ABA7F50012F7D5 /* Safe_city_cameras.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Safe_city_cameras.json; sourceTree = "<group>"; };
 		1AB6B3F022ABACC10012F7D5 /* GetCameras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCameras.swift; sourceTree = "<group>"; };
 		1AB6B3F222ABAD360012F7D5 /* CameraResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraResponse.swift; sourceTree = "<group>"; };
+		1AB6B3F422ABB7900012F7D5 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightLightOverlay.swift; sourceTree = "<group>"; };
 		1AE0B40E22A328A800CB2B98 /* Light up the night.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light up the night.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE0B41122A328A800CB2B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,7 +129,7 @@
 			children = (
 				1AB6B3D822AAE7910012F7D5 /* DashboardCollectionViewCell.swift */,
 				1AB6B3D922AAE7910012F7D5 /* DashboardCollectionViewCell.xib */,
-				1AB6B3DE22AB041A0012F7D5 /* Point.swift */,
+				1AB6B3DE22AB041A0012F7D5 /* PointView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,6 +160,7 @@
 				1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */,
 				1AB6B3B822A878EC0012F7D5 /* StreetLight.swift */,
 				1AB6B3DC22AAEA190012F7D5 /* DashboardButton.swift */,
+				1AB6B3F422ABB7900012F7D5 /* Point.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -362,9 +365,10 @@
 				1AE0B44022A485F300CB2B98 /* PedestrianCounter.swift in Sources */,
 				1A543F3622A5BCE9008EF90B /* LightLocation.swift in Sources */,
 				1AB6B3B922A878EC0012F7D5 /* StreetLight.swift in Sources */,
+				1AB6B3F522ABB7900012F7D5 /* Point.swift in Sources */,
 				1AB6B3E822AB5FD80012F7D5 /* GetTaxiRankLocations.swift in Sources */,
 				1AB6B3E622AB5FA80012F7D5 /* TaxiRankResponse.swift in Sources */,
-				1AB6B3DF22AB041A0012F7D5 /* Point.swift in Sources */,
+				1AB6B3DF22AB041A0012F7D5 /* PointView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

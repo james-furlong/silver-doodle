@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-class Point: MKAnnotationView {
+class PointView: MKAnnotationView {
     
     private static let maxSize: CGFloat = 4.0
     
@@ -21,10 +21,10 @@ class Point: MKAnnotationView {
             view.translatesAutoresizingMaskIntoConstraints = false
             view.backgroundColor = type.backgroundColor
             view.frame.size = CGSize(
-                width: Point.maxSize,
-                height: Point.maxSize
+                width: PointView.maxSize,
+                height: PointView.maxSize
             )
-            view.layer.cornerRadius = Point.maxSize / 2
+            view.layer.cornerRadius = PointView.maxSize / 2
             
             return view
         }()

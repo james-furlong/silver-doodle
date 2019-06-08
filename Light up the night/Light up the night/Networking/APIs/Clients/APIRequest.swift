@@ -82,7 +82,7 @@ extension APIRequest {
         onError: @escaping ((_: E?, Error) -> Void)
         ) {
         
-        guard let name = fileName as? String else { return }
+        guard let name = fileName.endpoint() as? String else { return }
         
         if let url = Bundle.main.url(forResource: name, withExtension: "json") {
             do {
