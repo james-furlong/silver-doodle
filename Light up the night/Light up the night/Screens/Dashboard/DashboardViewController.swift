@@ -86,6 +86,14 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         
     }
     
+    func addToMap(type: DashboardButton) {
+        
+    }
+    
+    func removeFromMap(type: DashboardButton) {
+        
+    }
+    
     func loadMap() {
         let overlay = NightLightOverlay()
         overlay.canReplaceMapContent = true
@@ -136,6 +144,24 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
     }
     
     func getFeatureLights() {
-        
+        GetFeatureLights().dispatch(
+            onSuccess: { successResponse in
+                // TODO: Turn into points and add to hashmap
+                // TODO: return points
+        },
+            onError: { errorResponse, error in
+                print("Error on feature lights: \(error.localizedDescription)")
+        })
+    }
+    
+    func getStreetLights() {
+        GetStreetLights().dispatch(
+            onSuccess: { successResponse in
+                // TODO: Turn into points and add to hashmap
+                // TODO: return points
+        },
+            onError: { errorResponse, error in
+                print("Error on street lights: \(error.localizedDescription)")
+        })
     }
 }
