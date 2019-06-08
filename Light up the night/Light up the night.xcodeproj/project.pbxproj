@@ -36,6 +36,8 @@
 		1AB6B3FF22AC2DE60012F7D5 /* AddressSearch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6B3FE22AC2DE60012F7D5 /* AddressSearch.xib */; };
 		1AB6B40322AC32BE0012F7D5 /* AddressSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B40122AC32BE0012F7D5 /* AddressSearchTableViewCell.swift */; };
 		1AB6B40422AC32BE0012F7D5 /* AddressSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6B40222AC32BE0012F7D5 /* AddressSearchTableViewCell.xib */; };
+		1AB6B40622AC3B320012F7D5 /* AddressSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B40522AC3B310012F7D5 /* AddressSearchResponse.swift */; };
+		1AB6B40822AC3B900012F7D5 /* GetAddressSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B40722AC3B900012F7D5 /* GetAddressSearchResults.swift */; };
 		1AB71CD122A72ADA00909561 /* NightLightOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */; };
 		1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41122A328A800CB2B98 /* AppDelegate.swift */; };
 		1AE0B41422A328A800CB2B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41322A328A800CB2B98 /* ViewController.swift */; };
@@ -83,6 +85,8 @@
 		1AB6B3FE22AC2DE60012F7D5 /* AddressSearch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressSearch.xib; sourceTree = "<group>"; };
 		1AB6B40122AC32BE0012F7D5 /* AddressSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSearchTableViewCell.swift; sourceTree = "<group>"; };
 		1AB6B40222AC32BE0012F7D5 /* AddressSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressSearchTableViewCell.xib; sourceTree = "<group>"; };
+		1AB6B40522AC3B310012F7D5 /* AddressSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSearchResponse.swift; sourceTree = "<group>"; };
+		1AB6B40722AC3B900012F7D5 /* GetAddressSearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAddressSearchResults.swift; sourceTree = "<group>"; };
 		1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightLightOverlay.swift; sourceTree = "<group>"; };
 		1AE0B40E22A328A800CB2B98 /* Light up the night.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light up the night.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE0B41122A328A800CB2B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -275,6 +279,7 @@
 				1AB6B3E722AB5FD80012F7D5 /* GetTaxiRankLocations.swift */,
 				1AB6B3F022ABACC10012F7D5 /* GetCameras.swift */,
 				1AB6B3F822AC24130012F7D5 /* GetPoliceStations.swift */,
+				1AB6B40722AC3B900012F7D5 /* GetAddressSearchResults.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				1AB6B3E522AB5FA80012F7D5 /* TaxiRankResponse.swift */,
 				1AB6B3F222ABAD360012F7D5 /* CameraResponse.swift */,
 				1AB6B3FA22AC24C00012F7D5 /* PoliceStationResponse.swift */,
+				1AB6B40522AC3B310012F7D5 /* AddressSearchResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -380,6 +386,7 @@
 				1AE0B43622A335C700CB2B98 /* APIEndpoint.swift in Sources */,
 				1AB71CD122A72ADA00909561 /* NightLightOverlay.swift in Sources */,
 				1AE0B43C22A4812800CB2B98 /* PedestrianCounterResponse.swift in Sources */,
+				1AB6B40622AC3B320012F7D5 /* AddressSearchResponse.swift in Sources */,
 				1AB6B3D522AAE2A40012F7D5 /* DashboardViewController.swift in Sources */,
 				1AB6B3E422AB08820012F7D5 /* ApiClient.swift in Sources */,
 				1AB6B3E222AB084B0012F7D5 /* ApiClientInjected.swift in Sources */,
@@ -388,6 +395,7 @@
 				1A543F2E22A585FA008EF90B /* FeatureLightingResponse.swift in Sources */,
 				1AE0B43122A3319F00CB2B98 /* PedestrianCounterLocationResponse.swift in Sources */,
 				1AB6B3F122ABACC10012F7D5 /* GetCameras.swift in Sources */,
+				1AB6B40822AC3B900012F7D5 /* GetAddressSearchResults.swift in Sources */,
 				1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */,
 				1AE0B43822A3362700CB2B98 /* APIRequest.swift in Sources */,
 				1AB6B3BC22A87E7E0012F7D5 /* UIView+Extensions.swift in Sources */,
