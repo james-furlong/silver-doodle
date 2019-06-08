@@ -23,6 +23,11 @@
 		1AB6B3E422AB08820012F7D5 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3E322AB08820012F7D5 /* ApiClient.swift */; };
 		1AB6B3E622AB5FA80012F7D5 /* TaxiRankResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3E522AB5FA80012F7D5 /* TaxiRankResponse.swift */; };
 		1AB6B3E822AB5FD80012F7D5 /* GetTaxiRankLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3E722AB5FD80012F7D5 /* GetTaxiRankLocations.swift */; };
+		1AB6B3ED22ABA7F50012F7D5 /* Pedestrian_network.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6B3EA22ABA7F50012F7D5 /* Pedestrian_network.json */; };
+		1AB6B3EE22ABA7F50012F7D5 /* Property_centroid.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6B3EB22ABA7F50012F7D5 /* Property_centroid.json */; };
+		1AB6B3EF22ABA7F50012F7D5 /* Safe_city_cameras.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6B3EC22ABA7F50012F7D5 /* Safe_city_cameras.json */; };
+		1AB6B3F122ABACC10012F7D5 /* GetCameras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3F022ABACC10012F7D5 /* GetCameras.swift */; };
+		1AB6B3F322ABAD360012F7D5 /* CameraResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3F222ABAD360012F7D5 /* CameraResponse.swift */; };
 		1AB71CD122A72ADA00909561 /* NightLightOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */; };
 		1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41122A328A800CB2B98 /* AppDelegate.swift */; };
 		1AE0B41422A328A800CB2B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41322A328A800CB2B98 /* ViewController.swift */; };
@@ -57,6 +62,11 @@
 		1AB6B3E322AB08820012F7D5 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		1AB6B3E522AB5FA80012F7D5 /* TaxiRankResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiRankResponse.swift; sourceTree = "<group>"; };
 		1AB6B3E722AB5FD80012F7D5 /* GetTaxiRankLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTaxiRankLocations.swift; sourceTree = "<group>"; };
+		1AB6B3EA22ABA7F50012F7D5 /* Pedestrian_network.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pedestrian_network.json; sourceTree = "<group>"; };
+		1AB6B3EB22ABA7F50012F7D5 /* Property_centroid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Property_centroid.json; sourceTree = "<group>"; };
+		1AB6B3EC22ABA7F50012F7D5 /* Safe_city_cameras.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Safe_city_cameras.json; sourceTree = "<group>"; };
+		1AB6B3F022ABACC10012F7D5 /* GetCameras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCameras.swift; sourceTree = "<group>"; };
+		1AB6B3F222ABAD360012F7D5 /* CameraResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraResponse.swift; sourceTree = "<group>"; };
 		1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightLightOverlay.swift; sourceTree = "<group>"; };
 		1AE0B40E22A328A800CB2B98 /* Light up the night.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light up the night.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE0B41122A328A800CB2B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +140,18 @@
 			path = Injectors;
 			sourceTree = "<group>";
 		};
+		1AB6B3E922ABA7B30012F7D5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1AB6B3EA22ABA7F50012F7D5 /* Pedestrian_network.json */,
+				1AB6B3EB22ABA7F50012F7D5 /* Property_centroid.json */,
+				1AB6B3EC22ABA7F50012F7D5 /* Safe_city_cameras.json */,
+				1AE0B41122A328A800CB2B98 /* AppDelegate.swift */,
+				1AE0B41822A328AB00CB2B98 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1AB71CCF22A72AB100909561 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,10 +185,9 @@
 				1AB6B3BA22A87E6E0012F7D5 /* Extensions */,
 				1AB71CCF22A72AB100909561 /* Classes */,
 				1AE0B42322A32E5500CB2B98 /* Networking */,
-				1AE0B41122A328A800CB2B98 /* AppDelegate.swift */,
+				1AB6B3E922ABA7B30012F7D5 /* Resources */,
 				1AE0B41322A328A800CB2B98 /* ViewController.swift */,
 				1AE0B41522A328A800CB2B98 /* Main.storyboard */,
-				1AE0B41822A328AB00CB2B98 /* Assets.xcassets */,
 				1AE0B41A22A328AB00CB2B98 /* LaunchScreen.storyboard */,
 				1AE0B41D22A328AB00CB2B98 /* Info.plist */,
 			);
@@ -222,6 +243,7 @@
 				1A543F2F22A58A6A008EF90B /* GetFeatureLights.swift */,
 				1A543F3322A58D62008EF90B /* GetStreetLights.swift */,
 				1AB6B3E722AB5FD80012F7D5 /* GetTaxiRankLocations.swift */,
+				1AB6B3F022ABACC10012F7D5 /* GetCameras.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -234,6 +256,7 @@
 				1A543F2D22A585FA008EF90B /* FeatureLightingResponse.swift */,
 				1A543F3122A58D31008EF90B /* StreetLightsResponse.swift */,
 				1AB6B3E522AB5FA80012F7D5 /* TaxiRankResponse.swift */,
+				1AB6B3F222ABAD360012F7D5 /* CameraResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -298,7 +321,10 @@
 			files = (
 				1AE0B41C22A328AB00CB2B98 /* LaunchScreen.storyboard in Resources */,
 				1AE0B41922A328AB00CB2B98 /* Assets.xcassets in Resources */,
+				1AB6B3EF22ABA7F50012F7D5 /* Safe_city_cameras.json in Resources */,
+				1AB6B3EE22ABA7F50012F7D5 /* Property_centroid.json in Resources */,
 				1AE0B41722A328A800CB2B98 /* Main.storyboard in Resources */,
+				1AB6B3ED22ABA7F50012F7D5 /* Pedestrian_network.json in Resources */,
 				1AB6B3DB22AAE7910012F7D5 /* DashboardCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,9 +351,11 @@
 				1AE0B43A22A47CE000CB2B98 /* PedestrianCounterAnnotation.swift in Sources */,
 				1A543F2E22A585FA008EF90B /* FeatureLightingResponse.swift in Sources */,
 				1AE0B43122A3319F00CB2B98 /* PedestrianCounterLocationResponse.swift in Sources */,
+				1AB6B3F122ABACC10012F7D5 /* GetCameras.swift in Sources */,
 				1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */,
 				1AE0B43822A3362700CB2B98 /* APIRequest.swift in Sources */,
 				1AB6B3BC22A87E7E0012F7D5 /* UIView+Extensions.swift in Sources */,
+				1AB6B3F322ABAD360012F7D5 /* CameraResponse.swift in Sources */,
 				1A543F3222A58D31008EF90B /* StreetLightsResponse.swift in Sources */,
 				1AE0B42E22A3314F00CB2B98 /* GetPedestrianCounterLocations.swift in Sources */,
 				1AE0B43E22A4820100CB2B98 /* GetPedestrianCount.swift in Sources */,

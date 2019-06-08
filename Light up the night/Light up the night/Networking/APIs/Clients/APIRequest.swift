@@ -76,6 +76,24 @@ extension APIRequest {
         }).resume()
     }
     
+    public static func readJson<R: Codable & APIEndpoint, T: Codable, E: Codable> (
+        fileName: R,
+        onSuccess: @escaping ((_: T) -> Void),
+        onError: @escaping ((_: E?, Error) -> Void)
+        ) {
+        
+        guard let name = fileName as? String else { return }
+        
+        if let url = Bundle.main.url(forResource: name, withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                self.processResponse(data, nil, nil, onSuccess: onSuccess, onError: onError)
+            } catch {
+                print("Error on retrieving local json file: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     public static func processResponse<T: Codable, E: Codable>(
         _ dataOrNil: Data?,
         _ urlResponseOrNil: URLResponse?,

@@ -1,0 +1,701 @@
+[
+	{
+        "ref": "36",
+        "name": "Safe City Camera 36",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.969566,
+                -37.810215
+            ]
+        },
+        "loc_desc": "Corner Exhbition and Lonsdale Street"
+    },
+    {
+        "ref": "34",
+        "name": "Safe City Camera 34",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.973895,
+                -37.813328
+            ]
+        },
+        "loc_desc": "Corner Spring and Collins (VicRoads Pole)"
+    },
+    {
+        "ref": "1800",
+        "name": "Safe City Camera 1800",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.972746,
+                -37.811454
+            ]
+        },
+        "loc_desc": "Bourke Street & Spring Street"
+    },
+    {
+        "ref": "18",
+        "name": "Safe City Camera 18",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.972432,
+                -37.811560
+            ]
+        },
+        "loc_desc": "Taxi Rank 40 Bourke Street"
+    },
+    {
+        "ref": "35",
+        "name": "Safe City Camera 35",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.970469,
+                -37.812131
+            ]
+        },
+        "loc_desc": "Corner Exhibition and Bourke Street"
+    },
+    {
+        "ref": "33",
+        "name": "Safe City Camera 33",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.971481,
+                -37.814059
+            ]
+        },
+        "loc_desc": "Corner Collins and Exhibition Street"
+    },
+    {
+        "ref": "15",
+        "name": "Safe City Camera 15",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.967192,
+                -37.810842
+            ]
+        },
+        "loc_desc": "Lonsdale Street & Russell Street"
+    },
+    {
+        "ref": "12",
+        "name": "Safe City Camera 12",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.967618,
+                -37.811830
+            ]
+        },
+        "loc_desc": "Little Bourke Street & Russell Street"
+    },
+    {
+        "ref": "11",
+        "name": "Safe City Camera 11",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.968107,
+                -37.812811
+            ]
+        },
+        "loc_desc": "Bourke Street & Russell Street"
+    },
+    {
+        "ref": "31",
+        "name": "Safe City Camera 31",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.968961,
+                -37.814765
+            ]
+        },
+        "loc_desc": "Corner Collins and Russell Street"
+    },
+    {
+        "ref": "27",
+        "name": "Safe City Camera 27",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.969901,
+                -37.816697
+            ]
+        },
+        "loc_desc": "Corner Flinders Street and Russell Street"
+    },
+    {
+        "ref": "54",
+        "name": "Safe City Camera 54",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.973798,
+                -37.819073
+            ]
+        },
+        "loc_desc": "Birranrung Marr"
+    },
+    {
+        "ref": "53",
+        "name": "Safe City Camera 53",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.968360,
+                -37.819740
+            ]
+        },
+        "loc_desc": "Riverside/St Kilda Road Bridge"
+    },
+    {
+        "ref": "1600",
+        "name": "Safe City Camera 1600",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.967610,
+                -37.818150
+            ]
+        },
+        "loc_desc": "Taxi Rank Outside Flinders Street Station"
+    },
+    {
+        "ref": "16",
+        "name": "Safe City Camera 16",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.967574,
+                -37.817519
+            ]
+        },
+        "loc_desc": "Flinders Street & Swanston Street"
+    },
+    {
+        "ref": "14",
+        "name": "Safe City Camera 14",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.967269,
+                -37.817712
+            ]
+        },
+        "loc_desc": "Flinders Street Station steps"
+    },
+    {
+        "ref": "13",
+        "name": "Safe City Camera 13",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.966980,
+                -37.816484
+            ]
+        },
+        "loc_desc": "Flinders Lane & Swanston Street"
+    },
+    {
+        "ref": "25",
+        "name": "Safe City Camera 25",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.966535,
+                -37.815491
+            ]
+        },
+        "loc_desc": "Corner Swanston and Collins Street"
+    },
+    {
+        "ref": "17",
+        "name": "Safe City Camera 17",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.966078,
+                -37.814489
+            ]
+        },
+        "loc_desc": "Little Collins Street & Swanston Street"
+    },
+    {
+        "ref": "19",
+        "name": "Safe City Camera 19",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.965626,
+                -37.813573
+            ]
+        },
+        "loc_desc": "Bourke Street & Swanston Street"
+    },
+    {
+        "ref": "32",
+        "name": "Safe City Camera 32",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.962207,
+                -37.812291
+            ]
+        },
+        "loc_desc": "Corner Lonsdale and Swanston Street"
+    },
+    {
+        "ref": "21",
+        "name": "Safe City Camera 21",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.961767,
+                -37.811306
+            ]
+        },
+        "loc_desc": "Little Lonsdale Street & Swanston Street"
+    },
+    {
+        "ref": "37",
+        "name": "Safe City Camera 37",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.961296,
+                -37.810351
+            ]
+        },
+        "loc_desc": "Corner Latrobe and Swanston Street"
+    },
+    {
+        "ref": "38",
+        "name": "Safe City Camera 38",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.961312,
+                -37.810342
+            ]
+        },
+        "loc_desc": "Latrobe and Elizabeth"
+    },
+    {
+        "ref": "20",
+        "name": "Safe City Camera 20",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.963093,
+                -37.814293
+            ]
+        },
+        "loc_desc": "Bourke Street & Elizabeth Street"
+    },
+    {
+        "ref": "24",
+        "name": "Safe City Camera 24",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.964485,
+                -37.813842
+            ]
+        },
+        "loc_desc": "Bourke Street Mall"
+    },
+    {
+        "ref": "23",
+        "name": "Safe City Camera 23",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.964059,
+                -37.816216
+            ]
+        },
+        "loc_desc": "Collins Street & Elizabeth Street"
+    },
+    {
+        "ref": "26",
+        "name": "Safe City Camera 26",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.964509,
+                -37.817200
+            ]
+        },
+        "loc_desc": "Corner Finders Lane and Elizabeth Street"
+    },
+    {
+        "ref": "41",
+        "name": "Safe City Camera 41",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.964142,
+                -37.817320
+            ]
+        },
+        "loc_desc": "Corner Flinders La/Staughton Ally"
+    },
+    {
+        "ref": "22",
+        "name": "Safe City Camera 22",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.965006,
+                -37.818222
+            ]
+        },
+        "loc_desc": "Flinders Street & Elizabeth Street"
+    },
+    [
+	{
+        "ref": "61",
+        "name": "Safe City Camera 61",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.965175,
+                -37.819235
+            ]
+        },
+        "loc_desc": "North Bank, Flinders Walk"
+    },
+    {
+        "ref": "63",
+        "name": "Safe City Camera 63",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.965034,
+                -37.820141
+            ]
+        },
+        "loc_desc": "Southgate Ave and Southbank Junction"
+    },
+    {
+        "ref": "52",
+        "name": "Safe City Camera 52",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.962979,
+                -37.820128
+            ]
+        },
+        "loc_desc": "Les Erdi Plaza/Nthbank"
+    },
+    {
+        "ref": "28",
+        "name": "Safe City Camera 28",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.962384,
+                -37.818848
+            ]
+        },
+        "loc_desc": "Corner Queen and Flinders Street"
+    },
+    {
+        "ref": "29",
+        "name": "Safe City Camera 29",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.961203,
+                -337.815928
+            ]
+        },
+        "loc_desc": "Corner Queen and Little Collins Street"
+    },
+    {
+        "ref": "30",
+        "name": "Safe City Camera 30",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.960672,
+                -37.814971
+            ]
+        },
+        "loc_desc": "Corner Queen and Bourke Street"
+    },
+    {
+        "ref": "55",
+        "name": "Safe City Camera 55",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.960286,
+                -37.813971
+            ]
+        },
+        "loc_desc": "Corner Queen and Little Bourke Street"
+    },
+    {
+        "ref": "39",
+        "name": "Safe City Camera 39",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.960835,
+                -37.812775
+            ]
+        },
+        "loc_desc": "Lonsdale/Hardware Lane"
+    },
+    {
+        "ref": "40",
+        "name": "Safe City Camera 40",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.956451,
+                -37.811764
+            ]
+        },
+        "loc_desc": "Corner Latrobe/William"
+    },
+    {
+        "ref": "59",
+        "name": "Safe City Camera 59",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.960001,
+                -37.819533
+            ]
+        },
+        "loc_desc": "Williams and Flinders St "
+    },
+    {
+        "ref": "50",
+        "name": "Safe City Camera 50",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.958159,
+                -37.822850
+            ]
+        },
+        "loc_desc": "Crown Sign on King Street Bridge"
+    },
+    {
+        "ref": "9",
+        "name": "Safe City Camera 9",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.957551,
+                -37.820365
+            ]
+        },
+        "loc_desc": "Flinders Street & King Street"
+    },
+    {
+        "ref": "700",
+        "name": "Safe City Camera 700",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.957117,
+                -37.819665
+            ]
+        },
+        "loc_desc": "Taxi Rank Outside 55 King Street"
+    },
+    {
+        "ref": "6",
+        "name": "Safe City Camera 6",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.956632,
+                -37.818347
+            ]
+        },
+        "loc_desc": "Collins Street & King Street"
+    },
+    {
+        "ref": "5",
+        "name": "Safe City Camera 5",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.956173,
+                -37.817361
+            ]
+        },
+        "loc_desc": "Little Collins Street & King Street"
+    },
+    {
+        "ref": "4",
+        "name": "Safe City Camera 4",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.955753,
+                -37.816374
+            ]
+        },
+        "loc_desc": "Bourke Street & King"
+    },
+    {
+        "ref": "3",
+        "name": "Safe City Camera 3",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.955268,
+                -37.815393
+            ]
+        },
+        "loc_desc": "Little Bourke Street & King Street"
+    },
+    {
+        "ref": "2",
+        "name": "Safe City Camera 2",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.955196,
+                -37.815051
+            ]
+        },
+        "loc_desc": "Outside 212 King Street"
+    },
+    {
+        "ref": "1",
+        "name": "Safe City Camera 1",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.954815,
+                -37.814407
+            ]
+        },
+        "loc_desc": "Lonsdale Street & King Street"
+    },
+    {
+        "ref": "44",
+        "name": "Safe City Camera 44",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.952337,
+                37.815122
+            ]
+        },
+        "loc_desc": "Cnr Spencer St/Lonsdale St"
+    },
+    {
+        "ref": "43",
+        "name": "Safe City Camera 43",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.954168,
+                -37.818945
+            ]
+        },
+        "loc_desc": "Corner Spencer St/ Bourke St"
+    },
+    {
+        "ref": "42",
+        "name": "Safe City Camera 42",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.955018,
+                -37.821054
+            ]
+        },
+        "loc_desc": "Corner Flinders St/Spencer St"
+    },
+    {
+        "ref": "56",
+        "name": "Safe City Camera 56",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.955762,
+                -37.822459
+            ]
+        },
+        "loc_desc": "Spencer St (Batman Park)"
+    },
+    {
+        "ref": "49",
+        "name": "Safe City Camera 49",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.956402,
+                -37.823726
+            ]
+        },
+        "loc_desc": "Clarendon Street Opposite Convention Center"
+    },
+    {
+        "ref": "45",
+        "name": "Safe City Camera 45",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.946544,
+                -37.819128
+            ]
+        },
+        "loc_desc": "Harbour Esp NW Nab Building"
+    },
+    {
+        "ref": "46",
+        "name": "Safe City Camera 46",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.945118,
+                -37.816215
+            ]
+        },
+        "loc_desc": "Harbour Esp SE Crn Center Wharf"
+    },
+    {
+        "ref": "47",
+        "name": "Safe City Camera 47",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.944716,
+                -37.815077
+            ]
+        },
+        "loc_desc": "Corner Latrobe St/ Harbour Esp"
+    },
+    {
+        "ref": "48",
+        "name": "Safe City Camera 48",
+        "the_geom": {
+            "type": "Point",
+            "coordinates": [
+                144.944142,
+                -37.814208
+            ]
+        },
+        "loc_desc": "Harbour ESP SE Corner West Wharf"
+    }
+]
+
+]

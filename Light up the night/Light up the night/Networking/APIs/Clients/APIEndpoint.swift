@@ -11,6 +11,4 @@ import Foundation
 protocol APIEndpoint {
     
     func endpoint() -> String
-    
-    
 }

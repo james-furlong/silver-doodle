@@ -8,6 +8,6 @@
 
 protocol ApiClientInjected {}
 
-extension ApiClientInjected {
-    var apiClient: ApiClient { return ApiClient() }
-}
+//extension ApiClientInjected {
+//    var apiClient: ApiClient { return ApiClient() }
+//}
