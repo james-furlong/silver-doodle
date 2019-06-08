@@ -32,6 +32,10 @@
 		1AB6B3F722AC23EF0012F7D5 /* Vic_police_locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6B3F622AC23EF0012F7D5 /* Vic_police_locations.json */; };
 		1AB6B3F922AC24130012F7D5 /* GetPoliceStations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3F822AC24130012F7D5 /* GetPoliceStations.swift */; };
 		1AB6B3FB22AC24C00012F7D5 /* PoliceStationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3FA22AC24C00012F7D5 /* PoliceStationResponse.swift */; };
+		1AB6B3FD22AC2D8B0012F7D5 /* AddressSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3FC22AC2D8B0012F7D5 /* AddressSearch.swift */; };
+		1AB6B3FF22AC2DE60012F7D5 /* AddressSearch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6B3FE22AC2DE60012F7D5 /* AddressSearch.xib */; };
+		1AB6B40322AC32BE0012F7D5 /* AddressSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B40122AC32BE0012F7D5 /* AddressSearchTableViewCell.swift */; };
+		1AB6B40422AC32BE0012F7D5 /* AddressSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6B40222AC32BE0012F7D5 /* AddressSearchTableViewCell.xib */; };
 		1AB71CD122A72ADA00909561 /* NightLightOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */; };
 		1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41122A328A800CB2B98 /* AppDelegate.swift */; };
 		1AE0B41422A328A800CB2B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41322A328A800CB2B98 /* ViewController.swift */; };
@@ -75,6 +79,10 @@
 		1AB6B3F622AC23EF0012F7D5 /* Vic_police_locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Vic_police_locations.json; sourceTree = "<group>"; };
 		1AB6B3F822AC24130012F7D5 /* GetPoliceStations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPoliceStations.swift; sourceTree = "<group>"; };
 		1AB6B3FA22AC24C00012F7D5 /* PoliceStationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceStationResponse.swift; sourceTree = "<group>"; };
+		1AB6B3FC22AC2D8B0012F7D5 /* AddressSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSearch.swift; sourceTree = "<group>"; };
+		1AB6B3FE22AC2DE60012F7D5 /* AddressSearch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressSearch.xib; sourceTree = "<group>"; };
+		1AB6B40122AC32BE0012F7D5 /* AddressSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSearchTableViewCell.swift; sourceTree = "<group>"; };
+		1AB6B40222AC32BE0012F7D5 /* AddressSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressSearchTableViewCell.xib; sourceTree = "<group>"; };
 		1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightLightOverlay.swift; sourceTree = "<group>"; };
 		1AE0B40E22A328A800CB2B98 /* Light up the night.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light up the night.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE0B41122A328A800CB2B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +144,7 @@
 				1AB6B3D822AAE7910012F7D5 /* DashboardCollectionViewCell.swift */,
 				1AB6B3D922AAE7910012F7D5 /* DashboardCollectionViewCell.xib */,
 				1AB6B3DE22AB041A0012F7D5 /* PointView.swift */,
+				1AB6B40022AC32940012F7D5 /* Search */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,6 +168,17 @@
 				1AE0B41822A328AB00CB2B98 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1AB6B40022AC32940012F7D5 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1AB6B3FC22AC2D8B0012F7D5 /* AddressSearch.swift */,
+				1AB6B3FE22AC2DE60012F7D5 /* AddressSearch.xib */,
+				1AB6B40122AC32BE0012F7D5 /* AddressSearchTableViewCell.swift */,
+				1AB6B40222AC32BE0012F7D5 /* AddressSearchTableViewCell.xib */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		1AB71CCF22A72AB100909561 /* Classes */ = {
@@ -335,7 +355,9 @@
 				1AB6B3F722AC23EF0012F7D5 /* Vic_police_locations.json in Resources */,
 				1AE0B41922A328AB00CB2B98 /* Assets.xcassets in Resources */,
 				1AB6B3EF22ABA7F50012F7D5 /* Safe_city_cameras.json in Resources */,
+				1AB6B40422AC32BE0012F7D5 /* AddressSearchTableViewCell.xib in Resources */,
 				1AB6B3EE22ABA7F50012F7D5 /* Property_centroid.json in Resources */,
+				1AB6B3FF22AC2DE60012F7D5 /* AddressSearch.xib in Resources */,
 				1AE0B41722A328A800CB2B98 /* Main.storyboard in Resources */,
 				1AB6B3ED22ABA7F50012F7D5 /* Pedestrian_network.json in Resources */,
 				1AB6B3DB22AAE7910012F7D5 /* DashboardCollectionViewCell.xib in Resources */,
@@ -373,11 +395,13 @@
 				1A543F3222A58D31008EF90B /* StreetLightsResponse.swift in Sources */,
 				1AE0B42E22A3314F00CB2B98 /* GetPedestrianCounterLocations.swift in Sources */,
 				1AE0B43E22A4820100CB2B98 /* GetPedestrianCount.swift in Sources */,
+				1AB6B40322AC32BE0012F7D5 /* AddressSearchTableViewCell.swift in Sources */,
 				1AE0B44022A485F300CB2B98 /* PedestrianCounter.swift in Sources */,
 				1A543F3622A5BCE9008EF90B /* LightLocation.swift in Sources */,
 				1AB6B3B922A878EC0012F7D5 /* StreetLight.swift in Sources */,
 				1AB6B3F522ABB7900012F7D5 /* Point.swift in Sources */,
 				1AB6B3F922AC24130012F7D5 /* GetPoliceStations.swift in Sources */,
+				1AB6B3FD22AC2D8B0012F7D5 /* AddressSearch.swift in Sources */,
 				1AB6B3E822AB5FD80012F7D5 /* GetTaxiRankLocations.swift in Sources */,
 				1AB6B3E622AB5FA80012F7D5 /* TaxiRankResponse.swift in Sources */,
 				1AB6B3DF22AB041A0012F7D5 /* PointView.swift in Sources */,

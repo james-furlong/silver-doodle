@@ -11,7 +11,7 @@ import MapKit
 
 class PointView: MKAnnotationView {
     
-    private static let maxSize: CGFloat = 4.0
+    private static let maxSize: CGFloat = 6.0
     
     init(annotation: MKAnnotation?, reuseIdentifier: String?, type: DashboardButton) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
@@ -25,6 +25,7 @@ class PointView: MKAnnotationView {
                 height: PointView.maxSize
             )
             view.layer.cornerRadius = PointView.maxSize / 2
+            view.alpha = 0.75
             
             return view
         }()
