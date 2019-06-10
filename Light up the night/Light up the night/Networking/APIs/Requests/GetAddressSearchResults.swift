@@ -8,20 +8,22 @@
 
 import Foundation
 
-class GetAddressSearchResults: APIEndpoint, Codable {
+struct GetAddressSearchResults: APIEndpoint, Codable {
     
-    var query: String = ""
+    var query: String
+    
+    init(with query: String) {
+        self.query = "$where=address_pnt like '%\(query)%"
+    }
     
     func endpoint() -> String {
         return "https://data.melbourne.vic.gov.au/resource/imwx-szwr.json?\(query)"
     }
     
     func dispatch(
-        searchQuery: String,
         onSuccess successHandler: @escaping ((_: AddressSearchResponse) -> Void),
         onError errorHandler: @escaping ((_: APIRequest.ErrorResponse?, _: Error) -> Void)
         ) {
-        query = "$where=address_pnt like '%\(searchQuery)%"
         APIRequest.get(
             request: self,
             onSuccess: successHandler,

@@ -12,30 +12,31 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="0Gi-3K-AK9" customClass="AddressSearch" customModule="Light_up_the_night" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="460" height="465"/>
+        <view contentMode="scaleToFill" restorationIdentifier="AddressSearch" id="0Gi-3K-AK9" customClass="AddressSearch" customModule="Light_up_the_night" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="275"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ev3-j7-BfD">
-                    <rect key="frame" x="0.0" y="44" width="460" height="30"/>
+                    <rect key="frame" x="0.0" y="44" width="350" height="30"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="Bmk-eR-Yk8"/>
                     </constraints>
                 </view>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ad3-rr-Rbv">
-                    <rect key="frame" x="0.0" y="44" width="460" height="30"/>
+                    <rect key="frame" x="0.0" y="44" width="350" height="30"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FV0-Nv-ZTS">
-                    <rect key="frame" x="0.0" y="74" width="460" height="357"/>
+                    <rect key="frame" x="0.0" y="74" width="350" height="167"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <accessibility key="accessibilityConfiguration" identifier="AddressSearch"/>
             <constraints>
                 <constraint firstItem="ad3-rr-Rbv" firstAttribute="top" secondItem="luL-VE-VH6" secondAttribute="top" id="C53-zd-ZuE"/>
                 <constraint firstItem="FV0-Nv-ZTS" firstAttribute="top" secondItem="Ev3-j7-BfD" secondAttribute="bottom" id="CKK-JX-Wat"/>
@@ -54,7 +55,7 @@
                 <outlet property="resultsTableView" destination="FV0-Nv-ZTS" id="rgd-b4-bOP"/>
                 <outlet property="searchField" destination="ad3-rr-Rbv" id="PoJ-4i-sMK"/>
             </connections>
-            <point key="canvasLocation" x="-34.782608695652179" y="-507.92410714285711"/>
+            <point key="canvasLocation" x="-34.782608695652179" y="-571.54017857142856"/>
         </view>
     </objects>
 </document>

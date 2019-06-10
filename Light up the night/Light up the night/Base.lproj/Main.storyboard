@@ -43,50 +43,14 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8L-1B-hAs">
-                                <rect key="frame" x="60" y="54" width="294" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="nbZ-nl-aFr"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ME0-dV-5fG">
-                                <rect key="frame" x="60" y="54" width="294" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" textContentType="location"/>
-                            </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1hh-D9-n6b">
-                                <rect key="frame" x="60" y="84" width="294" height="200"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="xWT-nA-R6r"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1hh-D9-n6b" firstAttribute="top" secondItem="m8L-1B-hAs" secondAttribute="bottom" id="0NR-er-WfY"/>
                             <constraint firstItem="8PT-Pd-50n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3sd-LC-j9m"/>
-                            <constraint firstItem="ME0-dV-5fG" firstAttribute="leading" secondItem="m8L-1B-hAs" secondAttribute="leading" id="7nu-zy-3zT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lEV-lE-TSB" secondAttribute="trailing" id="BYv-a0-U13"/>
                             <constraint firstItem="lEV-lE-TSB" firstAttribute="top" secondItem="8PT-Pd-50n" secondAttribute="bottom" id="C0h-Sk-0MM"/>
-                            <constraint firstItem="m8L-1B-hAs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="E4p-qz-Hae"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1hh-D9-n6b" secondAttribute="trailing" constant="60" id="F6O-T4-Kln"/>
-                            <constraint firstItem="m8L-1B-hAs" firstAttribute="bottom" secondItem="ME0-dV-5fG" secondAttribute="bottom" id="FNM-6a-9EJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8PT-Pd-50n" secondAttribute="trailing" id="H3O-BQ-0UX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m8L-1B-hAs" secondAttribute="trailing" constant="60" id="JDR-L5-Kz3"/>
-                            <constraint firstItem="ME0-dV-5fG" firstAttribute="top" secondItem="m8L-1B-hAs" secondAttribute="top" id="PdK-YP-lCY"/>
-                            <constraint firstItem="1hh-D9-n6b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="Qf9-jy-WRJ"/>
-                            <constraint firstItem="m8L-1B-hAs" firstAttribute="trailing" secondItem="ME0-dV-5fG" secondAttribute="trailing" id="Zjb-5E-CeQ"/>
                             <constraint firstItem="lEV-lE-TSB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kDU-Wa-w8F"/>
-                            <constraint firstItem="m8L-1B-hAs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="tZh-sv-Ufd"/>
                             <constraint firstItem="lEV-lE-TSB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uoC-DK-s5i"/>
                             <constraint firstItem="8PT-Pd-50n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="w30-4u-wqM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8PT-Pd-50n" secondAttribute="bottom" constant="150" id="yPO-9T-jom"/>

@@ -8,19 +8,43 @@
 
 import UIKit
 
-class AddressSearch: UIView, UITableViewDelegate, UITableViewDataSource {
+@IBDesignable class AddressSearch: UIView, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var resultsTableView: UITableView!
-
+    var data = AddressSearchResponse()
     
+    @objc func textDidChange() {
+        let text = searchField.text ?? ""
+        if text.count >= 3 {
+            GetAddressSearchResults(with: text).dispatch(
+                onSuccess: { successResponse in
+                    self.data = successResponse
+                    self.resultsTableView.reloadData()
+            },
+                onError: { errorResponse, error in
+                    print("Error on address search result: \(error)")
+            })
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        if data.count > 5 {
+            data.removeSubrange(4...data.count - 1)
+        }
+        
+        let address = data[indexPath.row]
+        guard let cell = resultsTableView.dequeueReusableCell(withIdentifier: "AddressSearch") as? AddressSearchTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        cell.updateCell(with: address)
+        
+        return cell
     }
 }
 

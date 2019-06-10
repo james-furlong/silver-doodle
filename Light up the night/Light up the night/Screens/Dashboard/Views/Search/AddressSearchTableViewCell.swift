@@ -21,4 +21,7 @@ class AddressSearchTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func updateCell(with address: AddressSearchResponseElement) {
+        
+    }
 }

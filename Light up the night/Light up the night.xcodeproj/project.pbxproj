@@ -137,10 +137,10 @@
 		1AB6B3D722AAE7690012F7D5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1AB6B40022AC32940012F7D5 /* Search */,
 				1AB6B3D822AAE7910012F7D5 /* DashboardCollectionViewCell.swift */,
 				1AB6B3D922AAE7910012F7D5 /* DashboardCollectionViewCell.xib */,
 				1AB6B3DE22AB041A0012F7D5 /* PointView.swift */,
-				1AB6B40022AC32940012F7D5 /* Search */,
 			);
 			path = Views;
 			sourceTree = "<group>";
