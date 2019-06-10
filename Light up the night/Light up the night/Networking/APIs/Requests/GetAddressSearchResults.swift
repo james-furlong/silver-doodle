@@ -13,7 +13,7 @@ struct GetAddressSearchResults: APIEndpoint, Codable {
     var query: String
     
     init(with query: String) {
-        self.query = "$where=address_pnt like '%\(query)%"
+        self.query = "$where=street_no like '54%' AND str_name like 'Rat%'"
     }
     
     func endpoint() -> String {

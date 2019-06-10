@@ -12,6 +12,7 @@
 		1A543F3222A58D31008EF90B /* StreetLightsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F3122A58D31008EF90B /* StreetLightsResponse.swift */; };
 		1A543F3422A58D62008EF90B /* GetStreetLights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F3322A58D62008EF90B /* GetStreetLights.swift */; };
 		1A543F3622A5BCE9008EF90B /* LightLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F3522A5BCE9008EF90B /* LightLocation.swift */; };
+		1AB24B0D22AE4483006AC0BB /* AddressResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB24B0C22AE4483006AC0BB /* AddressResult.swift */; };
 		1AB6B3BC22A87E7E0012F7D5 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3BB22A87E7E0012F7D5 /* UIView+Extensions.swift */; };
 		1AB6B3D522AAE2A40012F7D5 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3D422AAE2A40012F7D5 /* DashboardViewController.swift */; };
 		1AB6B3DA22AAE7910012F7D5 /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3D822AAE7910012F7D5 /* DashboardCollectionViewCell.swift */; };
@@ -57,6 +58,7 @@
 		1A543F3122A58D31008EF90B /* StreetLightsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetLightsResponse.swift; sourceTree = "<group>"; };
 		1A543F3322A58D62008EF90B /* GetStreetLights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStreetLights.swift; sourceTree = "<group>"; };
 		1A543F3522A5BCE9008EF90B /* LightLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightLocation.swift; sourceTree = "<group>"; };
+		1AB24B0C22AE4483006AC0BB /* AddressResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressResult.swift; sourceTree = "<group>"; };
 		1AB6B3BB22A87E7E0012F7D5 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		1AB6B3D422AAE2A40012F7D5 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		1AB6B3D822AAE7910012F7D5 /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				1AB6B3FE22AC2DE60012F7D5 /* AddressSearch.xib */,
 				1AB6B40122AC32BE0012F7D5 /* AddressSearchTableViewCell.swift */,
 				1AB6B40222AC32BE0012F7D5 /* AddressSearchTableViewCell.xib */,
+				1AB24B0C22AE4483006AC0BB /* AddressResult.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				1AB6B3F322ABAD360012F7D5 /* CameraResponse.swift in Sources */,
 				1A543F3222A58D31008EF90B /* StreetLightsResponse.swift in Sources */,
 				1AE0B42E22A3314F00CB2B98 /* GetPedestrianCounterLocations.swift in Sources */,
+				1AB24B0D22AE4483006AC0BB /* AddressResult.swift in Sources */,
 				1AE0B43E22A4820100CB2B98 /* GetPedestrianCount.swift in Sources */,
 				1AB6B40322AC32BE0012F7D5 /* AddressSearchTableViewCell.swift in Sources */,
 				1AE0B44022A485F300CB2B98 /* PedestrianCounter.swift in Sources */,

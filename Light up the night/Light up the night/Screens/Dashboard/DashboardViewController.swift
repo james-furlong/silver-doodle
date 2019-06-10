@@ -26,7 +26,6 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         super.viewDidLoad()
         guard let search = Bundle.main.loadNibNamed("AddressSearch", owner: self, options: nil)?[0] as? AddressSearch else { return }
         self.view.addSubview(search)
-        search.resultsTableView.alpha = 0
         
         loadMap()
         
