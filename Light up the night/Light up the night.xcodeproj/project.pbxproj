@@ -31,7 +31,6 @@
 		1AB6B3FB22AC24C00012F7D5 /* PoliceStationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3FA22AC24C00012F7D5 /* PoliceStationResponse.swift */; };
 		1AB71CD122A72ADA00909561 /* NightLightOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */; };
 		1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41122A328A800CB2B98 /* AppDelegate.swift */; };
-		1AE0B41422A328A800CB2B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41322A328A800CB2B98 /* ViewController.swift */; };
 		1AE0B41722A328A800CB2B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE0B41522A328A800CB2B98 /* Main.storyboard */; };
 		1AE0B41922A328AB00CB2B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AE0B41822A328AB00CB2B98 /* Assets.xcassets */; };
 		1AE0B41C22A328AB00CB2B98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE0B41A22A328AB00CB2B98 /* LaunchScreen.storyboard */; };
@@ -72,7 +71,6 @@
 		1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightLightOverlay.swift; sourceTree = "<group>"; };
 		1AE0B40E22A328A800CB2B98 /* Light up the night.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light up the night.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE0B41122A328A800CB2B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1AE0B41322A328A800CB2B98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1AE0B41622A328A800CB2B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1AE0B41822A328AB00CB2B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AE0B41B22A328AB00CB2B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -181,7 +179,6 @@
 				1AB71CCF22A72AB100909561 /* Classes */,
 				1AE0B42322A32E5500CB2B98 /* Networking */,
 				1AB6B3E922ABA7B30012F7D5 /* Resources */,
-				1AE0B41322A328A800CB2B98 /* ViewController.swift */,
 				1AE0B41522A328A800CB2B98 /* Main.storyboard */,
 				1AE0B41A22A328AB00CB2B98 /* LaunchScreen.storyboard */,
 				1AE0B41D22A328AB00CB2B98 /* Info.plist */,
@@ -332,7 +329,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AE0B41422A328A800CB2B98 /* ViewController.swift in Sources */,
 				1AE0B44222A48DF300CB2B98 /* CounterLocation.swift in Sources */,
 				1A543F3422A58D62008EF90B /* GetStreetLights.swift in Sources */,
 				1AB6B3FB22AC24C00012F7D5 /* PoliceStationResponse.swift in Sources */,
