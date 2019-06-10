@@ -9,6 +9,9 @@
 import UIKit.UIView
 
 extension UIView {
+    /// Function to transfor a UIView into a UIImage
+    ///
+    /// - Returns: a UIImage type version of the original UIView
     func asImage() -> UIImage {
         let renderer = UIGraphicsImageRenderer(bounds: bounds)
         return renderer.image { rendererContext in

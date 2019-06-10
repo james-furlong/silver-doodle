@@ -96,16 +96,23 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
     
     // MARK: - Functions
     
+    /// Function to add locations to the Map
+    ///
+    /// - Parameter points: An array of locations that conform to MKAnnotation and NSObject
     func addToMap(points: [Point]) {
         points.forEach { point in
             self.mapView.addAnnotation(point)
         }
     }
     
+    /// Function remove locations from the map
+    ///
+    /// - Parameter type: The type to be removed from the map
     func removeFromMap(type: DashboardButton) {
         
     }
     
+    /// Func to load the mapView and render a different tile collection for it
     func loadMap() {
         let overlay = NightLightOverlay()
         overlay.canReplaceMapContent = true
@@ -116,6 +123,9 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         centerMapOnLocation(location: initialLocation)
     }
     
+    /// Func to center the map on a sepcific location
+    ///
+    /// - Parameter location: The location that will be focused for the mapView
     func centerMapOnLocation(location: CLLocation?) {
         let regionRadius: CLLocationDistance = 2500
         guard let location = location else { return }
@@ -123,6 +133,9 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
+    // MARK: - Get API Functions
+    
+    /// Function to retrive the Pedestrian Counter Locations
     func getCounterLocations() {
         GetPedestrianCounterLocations().dispatch(
             onSuccess: { successResponse in
@@ -141,8 +154,7 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         })
     }
     
-    // MARK: - Get API Functions
-    
+    /// Function to retrieve the statistics for the Pedestrian Counters
     func getCounterStats() {
         GetPedestrianCount().dispatch(
             onSuccess: { successResponse in
@@ -157,11 +169,13 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         })
     }
     
+    /// Function to trigger the two Light API calls (this is done here to prevent any order or execution issues)
     func getLights() {
         getFeatureLights()
         getStreetLights()
     }
     
+    /// Function retrieve the feature lights and their statistics from an external API
     func getFeatureLights() {
         GetFeatureLights().dispatch(
             onSuccess: { successResponse in
@@ -183,6 +197,7 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         })
     }
     
+    /// Function to retrieve the street lights and their statistics from an external API
     func getStreetLights() {
         GetStreetLights().dispatch(
             onSuccess: { successResponse in
@@ -204,6 +219,7 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         })
     }
     
+    /// Function to retrieve Taxi Rank information from an external API
     func getTaxiRanks() {
         GetTaxiRankLocations().dispatch(
             onSuccess: { successResponse in
@@ -225,6 +241,7 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         })
     }
     
+    /// Function retrieve the Camera locations from a locally stored JSON file
     func getCameras() {
         GetCameras().dispatch(
             onSuccess: { successResponse in
@@ -246,6 +263,7 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         })
     }
     
+    /// Function to retrieve the 24Hr Police Stations from a locally stored JSON file
     func getPoliceStations() {
         GetPoliceStations().dispatch(
             onSuccess: { successResponse in

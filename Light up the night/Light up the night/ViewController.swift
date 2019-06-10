@@ -93,7 +93,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 title: light.name,
                 subtitle: light.label,
                 luminosity: 80,
-                id: light.strID
+                id: light.strID ?? ""
             )
             lightLocationArray.append(location)
         }
