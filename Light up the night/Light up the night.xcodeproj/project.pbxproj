@@ -12,15 +12,12 @@
 		1A543F3222A58D31008EF90B /* StreetLightsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F3122A58D31008EF90B /* StreetLightsResponse.swift */; };
 		1A543F3422A58D62008EF90B /* GetStreetLights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F3322A58D62008EF90B /* GetStreetLights.swift */; };
 		1A543F3622A5BCE9008EF90B /* LightLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F3522A5BCE9008EF90B /* LightLocation.swift */; };
-		1AB6B3B922A878EC0012F7D5 /* StreetLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3B822A878EC0012F7D5 /* StreetLight.swift */; };
 		1AB6B3BC22A87E7E0012F7D5 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3BB22A87E7E0012F7D5 /* UIView+Extensions.swift */; };
 		1AB6B3D522AAE2A40012F7D5 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3D422AAE2A40012F7D5 /* DashboardViewController.swift */; };
 		1AB6B3DA22AAE7910012F7D5 /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3D822AAE7910012F7D5 /* DashboardCollectionViewCell.swift */; };
 		1AB6B3DB22AAE7910012F7D5 /* DashboardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6B3D922AAE7910012F7D5 /* DashboardCollectionViewCell.xib */; };
 		1AB6B3DD22AAEA190012F7D5 /* DashboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3DC22AAEA190012F7D5 /* DashboardButton.swift */; };
 		1AB6B3DF22AB041A0012F7D5 /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3DE22AB041A0012F7D5 /* PointView.swift */; };
-		1AB6B3E222AB084B0012F7D5 /* ApiClientInjected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3E122AB084B0012F7D5 /* ApiClientInjected.swift */; };
-		1AB6B3E422AB08820012F7D5 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3E322AB08820012F7D5 /* ApiClient.swift */; };
 		1AB6B3E622AB5FA80012F7D5 /* TaxiRankResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3E522AB5FA80012F7D5 /* TaxiRankResponse.swift */; };
 		1AB6B3E822AB5FD80012F7D5 /* GetTaxiRankLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3E722AB5FD80012F7D5 /* GetTaxiRankLocations.swift */; };
 		1AB6B3ED22ABA7F50012F7D5 /* Pedestrian_network.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6B3EA22ABA7F50012F7D5 /* Pedestrian_network.json */; };
@@ -40,7 +37,6 @@
 		1AB6B40822AC3B900012F7D5 /* GetAddressSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B40722AC3B900012F7D5 /* GetAddressSearchResults.swift */; };
 		1AB71CD122A72ADA00909561 /* NightLightOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */; };
 		1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41122A328A800CB2B98 /* AppDelegate.swift */; };
-		1AE0B41422A328A800CB2B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41322A328A800CB2B98 /* ViewController.swift */; };
 		1AE0B41722A328A800CB2B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE0B41522A328A800CB2B98 /* Main.storyboard */; };
 		1AE0B41922A328AB00CB2B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AE0B41822A328AB00CB2B98 /* Assets.xcassets */; };
 		1AE0B41C22A328AB00CB2B98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE0B41A22A328AB00CB2B98 /* LaunchScreen.storyboard */; };
@@ -61,15 +57,12 @@
 		1A543F3122A58D31008EF90B /* StreetLightsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetLightsResponse.swift; sourceTree = "<group>"; };
 		1A543F3322A58D62008EF90B /* GetStreetLights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStreetLights.swift; sourceTree = "<group>"; };
 		1A543F3522A5BCE9008EF90B /* LightLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightLocation.swift; sourceTree = "<group>"; };
-		1AB6B3B822A878EC0012F7D5 /* StreetLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetLight.swift; sourceTree = "<group>"; };
 		1AB6B3BB22A87E7E0012F7D5 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		1AB6B3D422AAE2A40012F7D5 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		1AB6B3D822AAE7910012F7D5 /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
 		1AB6B3D922AAE7910012F7D5 /* DashboardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardCollectionViewCell.xib; sourceTree = "<group>"; };
 		1AB6B3DC22AAEA190012F7D5 /* DashboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardButton.swift; sourceTree = "<group>"; };
 		1AB6B3DE22AB041A0012F7D5 /* PointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
-		1AB6B3E122AB084B0012F7D5 /* ApiClientInjected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientInjected.swift; sourceTree = "<group>"; };
-		1AB6B3E322AB08820012F7D5 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		1AB6B3E522AB5FA80012F7D5 /* TaxiRankResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiRankResponse.swift; sourceTree = "<group>"; };
 		1AB6B3E722AB5FD80012F7D5 /* GetTaxiRankLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTaxiRankLocations.swift; sourceTree = "<group>"; };
 		1AB6B3EA22ABA7F50012F7D5 /* Pedestrian_network.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pedestrian_network.json; sourceTree = "<group>"; };
@@ -90,7 +83,6 @@
 		1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightLightOverlay.swift; sourceTree = "<group>"; };
 		1AE0B40E22A328A800CB2B98 /* Light up the night.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light up the night.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE0B41122A328A800CB2B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1AE0B41322A328A800CB2B98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1AE0B41622A328A800CB2B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1AE0B41822A328AB00CB2B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AE0B41B22A328AB00CB2B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -153,14 +145,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		1AB6B3E022AB08360012F7D5 /* Injectors */ = {
-			isa = PBXGroup;
-			children = (
-				1AB6B3E122AB084B0012F7D5 /* ApiClientInjected.swift */,
-			);
-			path = Injectors;
-			sourceTree = "<group>";
-		};
 		1AB6B3E922ABA7B30012F7D5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */,
-				1AB6B3B822A878EC0012F7D5 /* StreetLight.swift */,
 				1AB6B3DC22AAEA190012F7D5 /* DashboardButton.swift */,
 				1AB6B3F422ABB7900012F7D5 /* Point.swift */,
 			);
@@ -220,7 +203,6 @@
 				1AB71CCF22A72AB100909561 /* Classes */,
 				1AE0B42322A32E5500CB2B98 /* Networking */,
 				1AB6B3E922ABA7B30012F7D5 /* Resources */,
-				1AE0B41322A328A800CB2B98 /* ViewController.swift */,
 				1AE0B41522A328A800CB2B98 /* Main.storyboard */,
 				1AE0B41A22A328AB00CB2B98 /* LaunchScreen.storyboard */,
 				1AE0B41D22A328AB00CB2B98 /* Info.plist */,
@@ -239,7 +221,6 @@
 		1AE0B42A22A3311300CB2B98 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
-				1AB6B3E022AB08360012F7D5 /* Injectors */,
 				1AE0B43222A334A000CB2B98 /* Responses */,
 				1AE0B42F22A3318200CB2B98 /* Requests */,
 				1AE0B42C22A3312700CB2B98 /* Models */,
@@ -253,7 +234,6 @@
 			children = (
 				1AE0B43522A335C700CB2B98 /* APIEndpoint.swift */,
 				1AE0B43722A3362700CB2B98 /* APIRequest.swift */,
-				1AB6B3E322AB08820012F7D5 /* ApiClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -377,7 +357,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AE0B41422A328A800CB2B98 /* ViewController.swift in Sources */,
 				1AE0B44222A48DF300CB2B98 /* CounterLocation.swift in Sources */,
 				1A543F3422A58D62008EF90B /* GetStreetLights.swift in Sources */,
 				1AB6B3FB22AC24C00012F7D5 /* PoliceStationResponse.swift in Sources */,
@@ -388,8 +367,6 @@
 				1AE0B43C22A4812800CB2B98 /* PedestrianCounterResponse.swift in Sources */,
 				1AB6B40622AC3B320012F7D5 /* AddressSearchResponse.swift in Sources */,
 				1AB6B3D522AAE2A40012F7D5 /* DashboardViewController.swift in Sources */,
-				1AB6B3E422AB08820012F7D5 /* ApiClient.swift in Sources */,
-				1AB6B3E222AB084B0012F7D5 /* ApiClientInjected.swift in Sources */,
 				1AB6B3DD22AAEA190012F7D5 /* DashboardButton.swift in Sources */,
 				1AE0B43A22A47CE000CB2B98 /* PedestrianCounterAnnotation.swift in Sources */,
 				1A543F2E22A585FA008EF90B /* FeatureLightingResponse.swift in Sources */,
@@ -406,7 +383,6 @@
 				1AB6B40322AC32BE0012F7D5 /* AddressSearchTableViewCell.swift in Sources */,
 				1AE0B44022A485F300CB2B98 /* PedestrianCounter.swift in Sources */,
 				1A543F3622A5BCE9008EF90B /* LightLocation.swift in Sources */,
-				1AB6B3B922A878EC0012F7D5 /* StreetLight.swift in Sources */,
 				1AB6B3F522ABB7900012F7D5 /* Point.swift in Sources */,
 				1AB6B3F922AC24130012F7D5 /* GetPoliceStations.swift in Sources */,
 				1AB6B3FD22AC2D8B0012F7D5 /* AddressSearch.swift in Sources */,

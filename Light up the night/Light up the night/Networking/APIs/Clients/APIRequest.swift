@@ -25,6 +25,12 @@ class APIRequest {
 
 extension APIRequest {
     
+    /// A generic function to POST data to an API
+    ///
+    /// - Parameters:
+    ///   - request: The GET request that holds the API endpoint
+    ///   - onSuccess: Success handler
+    ///   - onError: Failure handler
     public static func post<R: Codable & APIEndpoint, T: Codable, E: Codable>(
         request: R,
         onSuccess: @escaping ((_: T) -> Void),
@@ -55,6 +61,12 @@ extension APIRequest {
         }).resume()
     }
     
+    /// A generic function to call and recieve an API call
+    ///
+    /// - Parameters:
+    ///   - request: The api request that holds the endpoint being hit
+    ///   - onSuccess: Success handler
+    ///   - onError: Failure handler
     public static func get<R: Codable & APIEndpoint, T: Codable, E: Codable> (
         request: R,
         onSuccess: @escaping ((_: T) -> Void),
@@ -76,13 +88,19 @@ extension APIRequest {
         }).resume()
     }
     
+    /// A generic function to read a JSON file that has been save locally
+    ///
+    /// - Parameters:
+    ///   - fileName: Name of the local JSON file (note: Do not include the extension)
+    ///   - onSuccess: Success closure
+    ///   - onError: Failure closure
     public static func readJson<R: Codable & APIEndpoint, T: Codable, E: Codable> (
         fileName: R,
         onSuccess: @escaping ((_: T) -> Void),
         onError: @escaping ((_: E?, Error) -> Void)
         ) {
         
-        guard let name = fileName.endpoint() as? String else { return }
+        let name = fileName.endpoint()
         
         if let url = Bundle.main.url(forResource: name, withExtension: "json") {
             do {
@@ -94,6 +112,14 @@ extension APIRequest {
         }
     }
     
+    /// A generic function to process and decode JSON data
+    ///
+    /// - Parameters:
+    ///   - dataOrNil: The data being decoded
+    ///   - urlResponseOrNil: The response from the original API call
+    ///   - errorOrNil: The error recieved if the API failed
+    ///   - onSuccess: The success handler
+    ///   - onError: The failure handler
     public static func processResponse<T: Codable, E: Codable>(
         _ dataOrNil: Data?,
         _ urlResponseOrNil: URLResponse?,
@@ -120,6 +146,10 @@ extension APIRequest {
         }
     }
     
+    /// Function to transform the APIEndpoint type into a URLRequest
+    ///
+    /// - Parameter request: The APIEndpoint object to be transformed
+    /// - Returns: The transformed URLReequest that can now be used to call an API
     public static func urlRequest(from request: APIEndpoint) -> URLRequest? {
         let endpoint = request.endpoint()
         guard let endpointUrl = URL(string: endpoint) else {
