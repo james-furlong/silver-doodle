@@ -17,9 +17,11 @@ class DashboardCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
+    /// Func to set up the collection view cell with a button
+    ///
+    /// - Parameter button: A DashboardButton type that will be used to setup the cell
     public func setupCell(with button: DashboardButton) {
         self.background.backgroundColor = button.backgroundColor
         self.title.text = button.title
