@@ -24,6 +24,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xL-eI-rfx">
                                 <rect key="frame" x="20" y="9.5" width="240" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -35,7 +36,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3xL-eI-rfx" firstAttribute="leading" secondItem="ToZ-H6-8eg" secondAttribute="leading" constant="20" id="2MJ-EW-iYn"/>
                             <constraint firstAttribute="bottom" secondItem="kql-Bm-Rlj" secondAttribute="bottom" id="JtO-Yd-QtK"/>
@@ -46,6 +47,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="ToZ-H6-8eg" secondAttribute="bottom" id="9rb-kL-807"/>
                     <constraint firstAttribute="trailing" secondItem="ToZ-H6-8eg" secondAttribute="trailing" id="Vco-Vi-AY6"/>
@@ -53,8 +55,13 @@
                     <constraint firstItem="ToZ-H6-8eg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="qtr-8v-Sk7"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="goImage" destination="kql-Bm-Rlj" id="ilK-dc-P0w"/>
+                <outlet property="titleLabel" destination="3xL-eI-rfx" id="LWM-oN-Uif"/>
+            </connections>
+            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
         </tableViewCell>
     </objects>
 </document>

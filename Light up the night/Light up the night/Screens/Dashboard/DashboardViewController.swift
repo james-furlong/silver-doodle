@@ -14,7 +14,8 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var collectionView: UICollectionView!
-//    @IBOutlet weak var searchView: AddressSearch!
+    @IBOutlet weak var addressSearchButton: UIButton!
+    //    @IBOutlet weak var searchView: AddressSearch!
     
     let locationManager = CLLocationManager()
     var tileRenderer: MKTileOverlayRenderer?
@@ -24,8 +25,8 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let search = Bundle.main.loadNibNamed("AddressSearch", owner: self, options: nil)?[0] as? AddressSearch else { return }
-        self.view.addSubview(search)
+//        guard let search = Bundle.main.loadNibNamed("AddressSearch", owner: self, options: nil)?[0] as? AddressSearch else { return }
+//        self.view.addSubview(search)
         
         loadMap()
         
@@ -96,6 +97,17 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
     
     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
         collectionView.cellForItem(at: indexPath)?.alpha = 1
+    }
+    
+    // MARK: - Action functions
+    
+    /// Action function to add an address search view to the view controller
+    ///
+    /// - Parameter sender: The button that was tapped
+    @IBAction func searchButtonTapped(_ sender: UIButton) {
+        guard let search = Bundle.main.loadNibNamed("AddressSearch", owner: self, options: nil)?[0] as? AddressSearch else { return }
+        self.view.addSubview(search)
+        self.addressSearchButton.isHidden = true
     }
     
     // MARK: - Functions

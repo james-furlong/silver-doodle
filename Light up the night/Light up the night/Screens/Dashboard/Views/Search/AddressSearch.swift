@@ -8,72 +8,68 @@
 
 import UIKit
 
-class AddressSearch: UIView {
+class AddressSearch: UIView, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var searchField: UITextField!
-    @IBOutlet weak var resultsStackView: UIStackView!
+    @IBOutlet weak var tableView: UITableView!
     var data = AddressSearchResponse()
     
     override func awakeFromNib() {
         searchField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        searchField.becomeFirstResponder()
+        tableView.delegate = self
+        tableView.dataSource = self
     }
-    
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//
-//    }
-//
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("Error on AddressSearch")
-//    }
-    
+        
     @objc func textDidChange() {
         let text = searchField.text ?? ""
         if text.count >= 3 {
             GetAddressSearchResults(with: text).dispatch(
                 onSuccess: { successResponse in
                     self.data = successResponse
-                    self.resultsStackView.subviews.forEach { view in
-                        self.resultsStackView.removeArrangedSubview(view)
-                    }
-                    self.resultsStackView.isHidden = true
-                    self.data.prefix(5).forEach { result in
-                        self.resultsStackView.addArrangedSubview(
-                            AddressResult(
-                                address: result.addressPnt
-                            )
-                        )
-                    }
-                    self.resultsStackView.isHidden = false
+                    self.tableView.reloadData()
             },
                 onError: { errorResponse, error in
                     print("Error on address search result: \(error)")
             })
-        } else {
-            self.resultsStackView.subviews.forEach { view in
-                self.resultsStackView.removeArrangedSubview(view)
-            }
-            self.resultsStackView.isHidden = true
+        }
+        else {
+            self.data = [AddressSearchResponseElement(
+                streetNo: "",
+                gisid: "",
+                theGeom: nil,
+                strName: "",
+                suburb: "",
+                addressPnt: "No search results",
+                suburbID: "",
+                streetID: "",
+                easting: "",
+                northing: "",
+                latitude: "",
+                longitude: "",
+                addComp: ""
+                )]
+            self.tableView.reloadData()
         }
     }
     
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return data.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if data.count > 5 {
-//            data.removeSubrange(4...data.count - 1)
-//        }
-//
-//        let address = data[indexPath.row]
-//        guard let cell = resultsTableView.dequeueReusableCell(withIdentifier: "AddressSearch") as? AddressSearchTableViewCell else {
-//            return UITableViewCell()
-//        }
-//
-//        cell.updateCell(with: address)
-//
-//        return cell
-//    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if data.count > 5 {
+            data.removeSubrange(4...data.count - 1)
+        }
+
+        let address = data[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AddressSearch") as? AddressSearchTableViewCell else {
+            return UITableViewCell()
+        }
+
+        cell.updateCell(with: address)
+
+        return cell
+    }
 }
 

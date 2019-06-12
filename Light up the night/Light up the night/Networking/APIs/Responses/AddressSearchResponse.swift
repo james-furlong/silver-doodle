@@ -11,7 +11,7 @@ import Foundation
 struct AddressSearchResponseElement: Codable {
     let streetNo: String?
     let gisid: String
-    let theGeom: TheGeom
+    let theGeom: TheGeom?
     let strName: String
     let suburb: String
     let addressPnt, suburbID, streetID, easting: String

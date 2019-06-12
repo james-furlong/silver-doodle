@@ -43,14 +43,36 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llX-Vb-uGz">
+                                <rect key="frame" x="20" y="44" width="374" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="h1g-LL-ai5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PVP-Dz-4Hq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="llX-Vb-uGz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0OX-LP-isa"/>
                             <constraint firstItem="8PT-Pd-50n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3sd-LC-j9m"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lEV-lE-TSB" secondAttribute="trailing" id="BYv-a0-U13"/>
                             <constraint firstItem="lEV-lE-TSB" firstAttribute="top" secondItem="8PT-Pd-50n" secondAttribute="bottom" id="C0h-Sk-0MM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8PT-Pd-50n" secondAttribute="trailing" id="H3O-BQ-0UX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="llX-Vb-uGz" secondAttribute="trailing" constant="20" id="MmF-D1-UvI"/>
                             <constraint firstItem="lEV-lE-TSB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kDU-Wa-w8F"/>
+                            <constraint firstItem="llX-Vb-uGz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lug-dN-jb3"/>
                             <constraint firstItem="lEV-lE-TSB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uoC-DK-s5i"/>
                             <constraint firstItem="8PT-Pd-50n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="w30-4u-wqM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8PT-Pd-50n" secondAttribute="bottom" constant="150" id="yPO-9T-jom"/>
@@ -58,6 +80,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="addressSearchButton" destination="llX-Vb-uGz" id="4aE-FT-2fL"/>
                         <outlet property="collectionView" destination="lEV-lE-TSB" id="p9y-3a-9yR"/>
                         <outlet property="mapView" destination="8PT-Pd-50n" id="4Yp-Gg-BJY"/>
                     </connections>

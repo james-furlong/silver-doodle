@@ -9,6 +9,9 @@
 import UIKit
 
 class AddressSearchTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var goImage: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,7 +24,10 @@ class AddressSearchTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    /// Function to update the cell UI elements
+    ///
+    /// - Parameter address: The address to update the cell with
     func updateCell(with address: AddressSearchResponseElement) {
-        
+        titleLabel.text = address.addressPnt
     }
 }
