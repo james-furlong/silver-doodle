@@ -19,6 +19,7 @@ class AddressSearch: UIView, UITableViewDelegate, UITableViewDataSource {
         searchField.becomeFirstResponder()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib(nibName: "AddressSearchTableViewCell", bundle: nil), forCellReuseIdentifier: "AddressSearch")
     }
         
     @objc func textDidChange() {

@@ -15,7 +15,6 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addressSearchButton: UIButton!
-    //    @IBOutlet weak var searchView: AddressSearch!
     
     let locationManager = CLLocationManager()
     var tileRenderer: MKTileOverlayRenderer?
@@ -25,8 +24,6 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        guard let search = Bundle.main.loadNibNamed("AddressSearch", owner: self, options: nil)?[0] as? AddressSearch else { return }
-//        self.view.addSubview(search)
         
         loadMap()
         
