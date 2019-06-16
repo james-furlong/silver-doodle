@@ -19,46 +19,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8PT-Pd-50n">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="712"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lEV-lE-TSB">
-                                <rect key="frame" x="0.0" y="712" width="414" height="150"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ry2-z4-cax">
-                                    <size key="itemSize" width="120" height="120"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DashboardButton" id="AdJ-vi-uE1">
-                                        <rect key="frame" x="0.0" y="15" width="120" height="120"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                        <color key="backgroundColor" red="0.87843137250000003" green="0.39607843139999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <size key="customSize" width="120" height="120"/>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8PT-Pd-50n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3sd-LC-j9m"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lEV-lE-TSB" secondAttribute="trailing" id="BYv-a0-U13"/>
-                            <constraint firstItem="lEV-lE-TSB" firstAttribute="top" secondItem="8PT-Pd-50n" secondAttribute="bottom" id="C0h-Sk-0MM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8PT-Pd-50n" secondAttribute="trailing" id="H3O-BQ-0UX"/>
-                            <constraint firstItem="lEV-lE-TSB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kDU-Wa-w8F"/>
-                            <constraint firstItem="lEV-lE-TSB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uoC-DK-s5i"/>
                             <constraint firstItem="8PT-Pd-50n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="w30-4u-wqM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8PT-Pd-50n" secondAttribute="bottom" constant="150" id="yPO-9T-jom"/>
+                            <constraint firstAttribute="bottom" secondItem="8PT-Pd-50n" secondAttribute="bottom" id="yPO-9T-jom"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="lEV-lE-TSB" id="p9y-3a-9yR"/>
                         <outlet property="mapView" destination="8PT-Pd-50n" id="4Yp-Gg-BJY"/>
                     </connections>
                 </viewController>

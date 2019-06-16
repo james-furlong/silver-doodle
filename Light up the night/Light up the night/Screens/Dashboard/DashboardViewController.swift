@@ -10,10 +10,9 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var collectionView: UICollectionView!
     
     let locationManager = CLLocationManager()
     var tileRenderer: MKTileOverlayRenderer?
@@ -24,13 +23,6 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
     override func viewDidLoad() {
         super.viewDidLoad()
         loadMap()
-        
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(
-            UINib.init(nibName: "DashboardCollectionViewCell", bundle: nil),
-            forCellWithReuseIdentifier: "DashboardButton"
-        )
         
         buttonArray = [.taxi, .police, .cameras, .lights]
         
@@ -59,39 +51,6 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
             type: annot.groupId
         )
         
-    }
-    
-    // MARK: - Collection View
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return DashboardButton.allCases.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DashboardButton", for: indexPath) as? DashboardCollectionViewCell else {
-            return UICollectionViewCell()
-        }
-        
-        cell.setupCell(with: buttonArray[indexPath.row])
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-        collectionView.cellForItem(at: indexPath)?.alpha = 0.5
-        
-        guard let cell = collectionView.cellForItem(at: indexPath) as? DashboardCollectionViewCell else { return }
-        guard let type: DashboardButton = DashboardButton(rawValue: cell.subtitle.text?.lowercased() ?? "") else { return }
-        switch type {
-            case .lights: getLights()
-            case .cameras: getCameras()
-            case .taxi: getTaxiRanks()
-            case .police: getPoliceStations()
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
-        collectionView.cellForItem(at: indexPath)?.alpha = 1
     }
     
     // MARK: - Functions
