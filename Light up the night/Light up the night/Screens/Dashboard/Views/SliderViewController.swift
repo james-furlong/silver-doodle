@@ -25,6 +25,7 @@ class SliderViewController: UIViewController, UICollectionViewDelegate, UICollec
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         prepareBackgroundView()
+        setCollectionViewPadding()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -56,6 +57,18 @@ class SliderViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         view.layer.cornerRadius = 10
         view.insertSubview(blurredView, at: 0)
+    }
+    
+    func setCollectionViewPadding() {
+        let width = buttonCollectionView.frame.width
+        let remainingWidth = width - (2.0 *  140.0)
+        let padding = remainingWidth / 4
+        buttonCollectionView.contentInset = UIEdgeInsets(
+            top: padding,
+            left: padding,
+            bottom: padding,
+            right: padding
+        )
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

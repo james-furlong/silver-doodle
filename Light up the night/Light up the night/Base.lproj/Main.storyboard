@@ -74,12 +74,12 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="da0-4O-6CN">
-                                <rect key="frame" x="20" y="126" width="374" height="320"/>
+                                <rect key="frame" x="20" y="111" width="374" height="320"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="320" id="bJd-NR-rNn"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OD3-GX-vaJ">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OD3-GX-vaJ">
                                     <size key="itemSize" width="140" height="80"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -139,6 +139,13 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25j-e0-q0R">
+                                <rect key="frame" x="20" y="431" width="374" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="P5t-rO-gyo"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -149,9 +156,12 @@
                             <constraint firstItem="IUm-nm-gJT" firstAttribute="trailing" secondItem="da0-4O-6CN" secondAttribute="trailing" constant="20" id="FvI-sS-o2T"/>
                             <constraint firstItem="z0c-HM-uFi" firstAttribute="leading" secondItem="IUm-nm-gJT" secondAttribute="leading" constant="20" id="VR3-Ph-MB3"/>
                             <constraint firstItem="1XS-1w-CEy" firstAttribute="leading" secondItem="IUm-nm-gJT" secondAttribute="leading" constant="20" id="bAW-RL-aMH"/>
-                            <constraint firstItem="da0-4O-6CN" firstAttribute="top" secondItem="z0c-HM-uFi" secondAttribute="bottom" constant="15" id="gW7-vs-2vn"/>
+                            <constraint firstItem="25j-e0-q0R" firstAttribute="leading" secondItem="IUm-nm-gJT" secondAttribute="leading" constant="20" id="fCq-hF-RDg"/>
+                            <constraint firstItem="da0-4O-6CN" firstAttribute="top" secondItem="z0c-HM-uFi" secondAttribute="bottom" id="gW7-vs-2vn"/>
                             <constraint firstItem="84b-cu-xSI" firstAttribute="top" secondItem="IUm-nm-gJT" secondAttribute="top" constant="10" id="hwZ-zs-Fxa"/>
                             <constraint firstItem="IUm-nm-gJT" firstAttribute="trailing" secondItem="1XS-1w-CEy" secondAttribute="trailing" constant="20" id="p1f-oo-l64"/>
+                            <constraint firstItem="IUm-nm-gJT" firstAttribute="trailing" secondItem="25j-e0-q0R" secondAttribute="trailing" constant="20" id="p21-Rr-g7a"/>
+                            <constraint firstItem="25j-e0-q0R" firstAttribute="top" secondItem="da0-4O-6CN" secondAttribute="bottom" id="pti-sh-dGz"/>
                             <constraint firstItem="IUm-nm-gJT" firstAttribute="trailing" secondItem="z0c-HM-uFi" secondAttribute="trailing" constant="20" id="zXF-wr-my7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IUm-nm-gJT"/>
