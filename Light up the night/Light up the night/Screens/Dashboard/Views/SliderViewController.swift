@@ -8,12 +8,15 @@
 
 import UIKit
 
-class SliderViewController: UIViewController {
+class SliderViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var buttonCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        buttonCollectionView.dataSource = self
+        buttonCollectionView.delegate = self
         
         let gesture = UIPanGestureRecognizer(target: self, action: #selector(panGesture))
         view.addGestureRecognizer(gesture)
@@ -53,5 +56,32 @@ class SliderViewController: UIViewController {
         
         view.layer.cornerRadius = 10
         view.insertSubview(blurredView, at: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return DashboardButton.allCases.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCell", for: indexPath) as? SliderButtonCollectionViewCell else { return UICollectionViewCell() }
+        
+        let button = DashboardButton.allCases[indexPath.row]
+        cell.updateCell(with: button)
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let button = DashboardButton.allCases[indexPath.row]
+        guard let parent = self.parent as? DashboardViewController else { return }
+        
+        switch button {
+            case .taxi: parent.getTaxiRanks()
+            case .cameras: parent.getCameras()
+            case .lights: parent.getLights()
+            case .police: parent.getPoliceStations()
+            default: break
+        }
     }
 }

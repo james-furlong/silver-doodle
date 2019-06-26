@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A0DC0AF22C2F728004C2BD2 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0DC0AE22C2F728004C2BD2 /* UIViewController+Extensions.swift */; };
 		1A0DC0B322C305D8004C2BD2 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0DC0B222C305D8004C2BD2 /* SliderViewController.swift */; };
+		1A0DC0B522C3113E004C2BD2 /* SliderButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0DC0B422C3113E004C2BD2 /* SliderButtonCollectionViewCell.swift */; };
 		1A543F2E22A585FA008EF90B /* FeatureLightingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F2D22A585FA008EF90B /* FeatureLightingResponse.swift */; };
 		1A543F3022A58A6A008EF90B /* GetFeatureLights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F2F22A58A6A008EF90B /* GetFeatureLights.swift */; };
 		1A543F3222A58D31008EF90B /* StreetLightsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F3122A58D31008EF90B /* StreetLightsResponse.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		1A0DC0AE22C2F728004C2BD2 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		1A0DC0B222C305D8004C2BD2 /* SliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SliderViewController.swift; path = Views/SliderViewController.swift; sourceTree = "<group>"; };
+		1A0DC0B422C3113E004C2BD2 /* SliderButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 		1A543F2D22A585FA008EF90B /* FeatureLightingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureLightingResponse.swift; sourceTree = "<group>"; };
 		1A543F2F22A58A6A008EF90B /* GetFeatureLights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFeatureLights.swift; sourceTree = "<group>"; };
 		1A543F3122A58D31008EF90B /* StreetLightsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetLightsResponse.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				1AB6B3D822AAE7910012F7D5 /* DashboardCollectionViewCell.swift */,
 				1AB6B3D922AAE7910012F7D5 /* DashboardCollectionViewCell.xib */,
 				1AB6B3DE22AB041A0012F7D5 /* PointView.swift */,
+				1A0DC0B422C3113E004C2BD2 /* SliderButtonCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				1AE0B43A22A47CE000CB2B98 /* PedestrianCounterAnnotation.swift in Sources */,
 				1A543F2E22A585FA008EF90B /* FeatureLightingResponse.swift in Sources */,
 				1AE0B43122A3319F00CB2B98 /* PedestrianCounterLocationResponse.swift in Sources */,
+				1A0DC0B522C3113E004C2BD2 /* SliderButtonCollectionViewCell.swift in Sources */,
 				1AB6B3F122ABACC10012F7D5 /* GetCameras.swift in Sources */,
 				1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */,
 				1AE0B43822A3362700CB2B98 /* APIRequest.swift in Sources */,
