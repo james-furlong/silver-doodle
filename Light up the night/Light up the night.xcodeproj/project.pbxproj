@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0DC0AF22C2F728004C2BD2 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0DC0AE22C2F728004C2BD2 /* UIViewController+Extensions.swift */; };
+		1A0DC0B322C305D8004C2BD2 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0DC0B222C305D8004C2BD2 /* SliderViewController.swift */; };
 		1A543F2E22A585FA008EF90B /* FeatureLightingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F2D22A585FA008EF90B /* FeatureLightingResponse.swift */; };
 		1A543F3022A58A6A008EF90B /* GetFeatureLights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F2F22A58A6A008EF90B /* GetFeatureLights.swift */; };
 		1A543F3222A58D31008EF90B /* StreetLightsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F3122A58D31008EF90B /* StreetLightsResponse.swift */; };
@@ -30,10 +32,6 @@
 		1AB6B3F922AC24130012F7D5 /* GetPoliceStations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3F822AC24130012F7D5 /* GetPoliceStations.swift */; };
 		1AB6B3FB22AC24C00012F7D5 /* PoliceStationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6B3FA22AC24C00012F7D5 /* PoliceStationResponse.swift */; };
 		1AB71CD122A72ADA00909561 /* NightLightOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */; };
-		1ABCCFF822B3675B00F1A302 /* ButtonSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABCCFF722B3675B00F1A302 /* ButtonSliderView.swift */; };
-		1ABCCFFC22B369E800F1A302 /* LocationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABCCFFB22B369E800F1A302 /* LocationButton.swift */; };
-		1ABCCFFE22B6E59200F1A302 /* ButtonSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABCCFFD22B6E59200F1A302 /* ButtonSliderView.swift */; };
-		1ABCD00022B6E5AB00F1A302 /* ButtonSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABCCFFF22B6E5AB00F1A302 /* ButtonSliderView.xib */; };
 		1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE0B41122A328A800CB2B98 /* AppDelegate.swift */; };
 		1AE0B41722A328A800CB2B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE0B41522A328A800CB2B98 /* Main.storyboard */; };
 		1AE0B41922A328AB00CB2B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AE0B41822A328AB00CB2B98 /* Assets.xcassets */; };
@@ -50,6 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A0DC0AE22C2F728004C2BD2 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		1A0DC0B222C305D8004C2BD2 /* SliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SliderViewController.swift; path = Views/SliderViewController.swift; sourceTree = "<group>"; };
 		1A543F2D22A585FA008EF90B /* FeatureLightingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureLightingResponse.swift; sourceTree = "<group>"; };
 		1A543F2F22A58A6A008EF90B /* GetFeatureLights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFeatureLights.swift; sourceTree = "<group>"; };
 		1A543F3122A58D31008EF90B /* StreetLightsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetLightsResponse.swift; sourceTree = "<group>"; };
@@ -73,10 +73,6 @@
 		1AB6B3F822AC24130012F7D5 /* GetPoliceStations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPoliceStations.swift; sourceTree = "<group>"; };
 		1AB6B3FA22AC24C00012F7D5 /* PoliceStationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceStationResponse.swift; sourceTree = "<group>"; };
 		1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightLightOverlay.swift; sourceTree = "<group>"; };
-		1ABCCFF722B3675B00F1A302 /* ButtonSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSliderView.swift; sourceTree = "<group>"; };
-		1ABCCFFB22B369E800F1A302 /* LocationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationButton.swift; sourceTree = "<group>"; };
-		1ABCCFFD22B6E59200F1A302 /* ButtonSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSliderView.swift; sourceTree = "<group>"; };
-		1ABCCFFF22B6E5AB00F1A302 /* ButtonSliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonSliderView.xib; sourceTree = "<group>"; };
 		1AE0B40E22A328A800CB2B98 /* Light up the night.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light up the night.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE0B41122A328A800CB2B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AE0B41622A328A800CB2B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				1AB6B3BB22A87E7E0012F7D5 /* UIView+Extensions.swift */,
+				1A0DC0AE22C2F728004C2BD2 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -126,6 +123,7 @@
 			children = (
 				1AB6B3D722AAE7690012F7D5 /* Views */,
 				1AB6B3D422AAE2A40012F7D5 /* DashboardViewController.swift */,
+				1A0DC0B222C305D8004C2BD2 /* SliderViewController.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -136,7 +134,6 @@
 				1AB6B3D822AAE7910012F7D5 /* DashboardCollectionViewCell.swift */,
 				1AB6B3D922AAE7910012F7D5 /* DashboardCollectionViewCell.xib */,
 				1AB6B3DE22AB041A0012F7D5 /* PointView.swift */,
-				1ABCCFF722B3675B00F1A302 /* ButtonSliderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,9 +157,6 @@
 				1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */,
 				1AB6B3DC22AAEA190012F7D5 /* DashboardButton.swift */,
 				1AB6B3F422ABB7900012F7D5 /* Point.swift */,
-				1ABCCFFB22B369E800F1A302 /* LocationButton.swift */,
-				1ABCCFFD22B6E59200F1A302 /* ButtonSliderView.swift */,
-				1ABCCFFF22B6E5AB00F1A302 /* ButtonSliderView.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -327,7 +321,6 @@
 				1AB6B3F722AC23EF0012F7D5 /* Vic_police_locations.json in Resources */,
 				1AE0B41922A328AB00CB2B98 /* Assets.xcassets in Resources */,
 				1AB6B3EF22ABA7F50012F7D5 /* Safe_city_cameras.json in Resources */,
-				1ABCD00022B6E5AB00F1A302 /* ButtonSliderView.xib in Resources */,
 				1AB6B3EE22ABA7F50012F7D5 /* Property_centroid.json in Resources */,
 				1AE0B41722A328A800CB2B98 /* Main.storyboard in Resources */,
 				1AB6B3ED22ABA7F50012F7D5 /* Pedestrian_network.json in Resources */,
@@ -342,11 +335,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ABCCFFC22B369E800F1A302 /* LocationButton.swift in Sources */,
 				1AE0B44222A48DF300CB2B98 /* CounterLocation.swift in Sources */,
 				1A543F3422A58D62008EF90B /* GetStreetLights.swift in Sources */,
 				1AB6B3FB22AC24C00012F7D5 /* PoliceStationResponse.swift in Sources */,
 				1A543F3022A58A6A008EF90B /* GetFeatureLights.swift in Sources */,
+				1A0DC0AF22C2F728004C2BD2 /* UIViewController+Extensions.swift in Sources */,
 				1AB6B3DA22AAE7910012F7D5 /* DashboardCollectionViewCell.swift in Sources */,
 				1AE0B43622A335C700CB2B98 /* APIEndpoint.swift in Sources */,
 				1AB71CD122A72ADA00909561 /* NightLightOverlay.swift in Sources */,
@@ -355,17 +348,16 @@
 				1AB6B3DD22AAEA190012F7D5 /* DashboardButton.swift in Sources */,
 				1AE0B43A22A47CE000CB2B98 /* PedestrianCounterAnnotation.swift in Sources */,
 				1A543F2E22A585FA008EF90B /* FeatureLightingResponse.swift in Sources */,
-				1ABCCFF822B3675B00F1A302 /* ButtonSliderView.swift in Sources */,
 				1AE0B43122A3319F00CB2B98 /* PedestrianCounterLocationResponse.swift in Sources */,
 				1AB6B3F122ABACC10012F7D5 /* GetCameras.swift in Sources */,
 				1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */,
-				1ABCCFFE22B6E59200F1A302 /* ButtonSliderView.swift in Sources */,
 				1AE0B43822A3362700CB2B98 /* APIRequest.swift in Sources */,
 				1AB6B3BC22A87E7E0012F7D5 /* UIView+Extensions.swift in Sources */,
 				1AB6B3F322ABAD360012F7D5 /* CameraResponse.swift in Sources */,
 				1A543F3222A58D31008EF90B /* StreetLightsResponse.swift in Sources */,
 				1AE0B42E22A3314F00CB2B98 /* GetPedestrianCounterLocations.swift in Sources */,
 				1AE0B43E22A4820100CB2B98 /* GetPedestrianCount.swift in Sources */,
+				1A0DC0B322C305D8004C2BD2 /* SliderViewController.swift in Sources */,
 				1AE0B44022A485F300CB2B98 /* PedestrianCounter.swift in Sources */,
 				1A543F3622A5BCE9008EF90B /* LightLocation.swift in Sources */,
 				1AB6B3F522ABB7900012F7D5 /* Point.swift in Sources */,

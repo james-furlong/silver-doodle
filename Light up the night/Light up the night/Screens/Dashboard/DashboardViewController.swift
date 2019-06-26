@@ -24,10 +24,13 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         super.viewDidLoad()
         loadMap()
         
-        buttonArray = [.taxi, .police, .cameras, .lights]
-        
         mapView.showsUserLocation = true
         mapView.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        addButtonSliderView()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -50,10 +53,27 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
             reuseIdentifier: annot.groupId.title,
             type: annot.groupId
         )
-        
     }
     
     // MARK: - Functions
+    
+    func addButtonSliderView() {
+        let height = view.frame.height
+        let width = view.frame.width
+        let frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
+        
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SliderViewController") as? SliderViewController else {
+            return
+        }
+        add(vc)
+        vc.view.frame = frame
+        view.addSubview(vc.view)
+        vc.didMove(toParent: self)
+        vc.loadViewIfNeeded()
+        
+//        _ = vc.view
+        
+    }
     
     /// Function to add locations to the Map
     ///

@@ -39,5 +39,62 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
         </scene>
+        <!--Slider View Controller-->
+        <scene sceneID="9u2-6K-RKL">
+            <objects>
+                <viewController storyboardIdentifier="SliderViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6GA-F5-ZFd" customClass="SliderViewController" customModule="Light_up_the_night" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kD1-pd-345">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light it up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XS-1w-CEy">
+                                <rect key="frame" x="20" y="64" width="374" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84b-cu-xSI">
+                                <rect key="frame" x="182" y="54" width="50" height="5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="UmJ-le-naM"/>
+                                    <constraint firstAttribute="width" constant="50" id="ytv-x8-uzB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="2.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0c-HM-uFi">
+                                <rect key="frame" x="20" y="110" width="374" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="pyi-1J-H4l"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z0c-HM-uFi" firstAttribute="top" secondItem="1XS-1w-CEy" secondAttribute="bottom" constant="10" id="01a-ne-3gF"/>
+                            <constraint firstItem="1XS-1w-CEy" firstAttribute="top" secondItem="84b-cu-xSI" secondAttribute="bottom" constant="5" id="1zX-F7-hX9"/>
+                            <constraint firstItem="84b-cu-xSI" firstAttribute="centerX" secondItem="kD1-pd-345" secondAttribute="centerX" id="Dsj-NH-ZJf"/>
+                            <constraint firstItem="z0c-HM-uFi" firstAttribute="leading" secondItem="IUm-nm-gJT" secondAttribute="leading" constant="20" id="VR3-Ph-MB3"/>
+                            <constraint firstItem="1XS-1w-CEy" firstAttribute="leading" secondItem="IUm-nm-gJT" secondAttribute="leading" constant="20" id="bAW-RL-aMH"/>
+                            <constraint firstItem="84b-cu-xSI" firstAttribute="top" secondItem="IUm-nm-gJT" secondAttribute="top" constant="10" id="hwZ-zs-Fxa"/>
+                            <constraint firstItem="IUm-nm-gJT" firstAttribute="trailing" secondItem="1XS-1w-CEy" secondAttribute="trailing" constant="20" id="p1f-oo-l64"/>
+                            <constraint firstItem="IUm-nm-gJT" firstAttribute="trailing" secondItem="z0c-HM-uFi" secondAttribute="trailing" constant="20" id="zXF-wr-my7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IUm-nm-gJT"/>
+                    </view>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="1XS-1w-CEy" id="U8b-bo-dOT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0XL-vB-fhH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="89"/>
+        </scene>
     </scenes>
 </document>
