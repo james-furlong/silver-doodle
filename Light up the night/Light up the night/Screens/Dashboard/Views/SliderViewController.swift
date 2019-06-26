@@ -10,6 +10,7 @@ import UIKit
 
 class SliderViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var buttonCollectionView: UICollectionView!
     
@@ -24,7 +25,7 @@ class SliderViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        prepareBackgroundView()
+//        prepareBackgroundView()
         setCollectionViewPadding()
     }
     
@@ -55,7 +56,8 @@ class SliderViewController: UIViewController, UICollectionViewDelegate, UICollec
         visualEffect.frame = UIScreen.main.bounds
         blurredView.frame = UIScreen.main.bounds
         
-        view.layer.cornerRadius = 10
+        blurredView.layer.cornerRadius = 50
+        backgroundView.addSubview(blurredView)
         view.insertSubview(blurredView, at: 0)
     }
     

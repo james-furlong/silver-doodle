@@ -47,6 +47,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbQ-O3-HQW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light it up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XS-1w-CEy">
                                 <rect key="frame" x="20" y="64" width="374" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
@@ -151,11 +160,16 @@
                         <constraints>
                             <constraint firstItem="z0c-HM-uFi" firstAttribute="top" secondItem="1XS-1w-CEy" secondAttribute="bottom" constant="10" id="01a-ne-3gF"/>
                             <constraint firstItem="1XS-1w-CEy" firstAttribute="top" secondItem="84b-cu-xSI" secondAttribute="bottom" constant="5" id="1zX-F7-hX9"/>
+                            <constraint firstItem="IUm-nm-gJT" firstAttribute="trailing" secondItem="vbQ-O3-HQW" secondAttribute="trailing" id="2v7-XF-ahL"/>
+                            <constraint firstAttribute="bottom" secondItem="vbQ-O3-HQW" secondAttribute="bottom" id="4r8-g1-21G"/>
                             <constraint firstItem="84b-cu-xSI" firstAttribute="centerX" secondItem="kD1-pd-345" secondAttribute="centerX" id="Dsj-NH-ZJf"/>
                             <constraint firstItem="da0-4O-6CN" firstAttribute="leading" secondItem="IUm-nm-gJT" secondAttribute="leading" constant="20" id="ETS-df-17E"/>
                             <constraint firstItem="IUm-nm-gJT" firstAttribute="trailing" secondItem="da0-4O-6CN" secondAttribute="trailing" constant="20" id="FvI-sS-o2T"/>
+                            <constraint firstItem="vbQ-O3-HQW" firstAttribute="top" secondItem="IUm-nm-gJT" secondAttribute="top" id="G0q-gw-gY3"/>
                             <constraint firstItem="z0c-HM-uFi" firstAttribute="leading" secondItem="IUm-nm-gJT" secondAttribute="leading" constant="20" id="VR3-Ph-MB3"/>
+                            <constraint firstAttribute="top" secondItem="25j-e0-q0R" secondAttribute="bottom" constant="-432" id="ajR-O9-QYw"/>
                             <constraint firstItem="1XS-1w-CEy" firstAttribute="leading" secondItem="IUm-nm-gJT" secondAttribute="leading" constant="20" id="bAW-RL-aMH"/>
+                            <constraint firstItem="vbQ-O3-HQW" firstAttribute="leading" secondItem="IUm-nm-gJT" secondAttribute="leading" id="bwW-j9-8fK"/>
                             <constraint firstItem="25j-e0-q0R" firstAttribute="leading" secondItem="IUm-nm-gJT" secondAttribute="leading" constant="20" id="fCq-hF-RDg"/>
                             <constraint firstItem="da0-4O-6CN" firstAttribute="top" secondItem="z0c-HM-uFi" secondAttribute="bottom" id="gW7-vs-2vn"/>
                             <constraint firstItem="84b-cu-xSI" firstAttribute="top" secondItem="IUm-nm-gJT" secondAttribute="top" constant="10" id="hwZ-zs-Fxa"/>
@@ -165,9 +179,15 @@
                             <constraint firstItem="IUm-nm-gJT" firstAttribute="trailing" secondItem="z0c-HM-uFi" secondAttribute="trailing" constant="20" id="zXF-wr-my7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IUm-nm-gJT"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="backgroundView" destination="vbQ-O3-HQW" id="D6w-1Z-pWz"/>
                         <outlet property="buttonCollectionView" destination="da0-4O-6CN" id="WCY-ep-cs9"/>
                         <outlet property="titleLabel" destination="1XS-1w-CEy" id="U8b-bo-dOT"/>
                     </connections>
