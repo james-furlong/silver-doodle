@@ -10,10 +10,9 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var collectionView: UICollectionView!
     
     let locationManager = CLLocationManager()
     var tileRenderer: MKTileOverlayRenderer?
@@ -25,17 +24,13 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         super.viewDidLoad()
         loadMap()
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(
-            UINib.init(nibName: "DashboardCollectionViewCell", bundle: nil),
-            forCellWithReuseIdentifier: "DashboardButton"
-        )
-        
-        buttonArray = [.taxi, .police, .cameras, .lights]
-        
         mapView.showsUserLocation = true
         mapView.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        addButtonSliderView()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -58,54 +53,45 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
             reuseIdentifier: annot.groupId.title,
             type: annot.groupId
         )
-        
-    }
-    
-    // MARK: - Collection View
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return DashboardButton.allCases.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DashboardButton", for: indexPath) as? DashboardCollectionViewCell else {
-            return UICollectionViewCell()
-        }
-        
-        cell.setupCell(with: buttonArray[indexPath.row])
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-        collectionView.cellForItem(at: indexPath)?.alpha = 0.5
-        
-        guard let cell = collectionView.cellForItem(at: indexPath) as? DashboardCollectionViewCell else { return }
-        guard let type: DashboardButton = DashboardButton(rawValue: cell.subtitle.text?.lowercased() ?? "") else { return }
-        switch type {
-            case .lights: getLights()
-            case .cameras: getCameras()
-            case .taxi: getTaxiRanks()
-            case .police: getPoliceStations()
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
-        collectionView.cellForItem(at: indexPath)?.alpha = 1
     }
     
     // MARK: - Functions
     
+    func addButtonSliderView() {
+        let height = view.frame.height
+        let width = view.frame.width
+        let frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
+        
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SliderViewController") as? SliderViewController else {
+            return
+        }
+        add(vc)
+        vc.view.frame = frame
+        view.addSubview(vc.view)
+        vc.didMove(toParent: self)
+        vc.loadViewIfNeeded()
+        
+//        _ = vc.view
+        
+    }
+    
+    /// Function to add locations to the Map
+    ///
+    /// - Parameter points: An array of locations that conform to MKAnnotation and NSObject
     func addToMap(points: [Point]) {
         points.forEach { point in
             self.mapView.addAnnotation(point)
         }
     }
     
+    /// Function remove locations from the map
+    ///
+    /// - Parameter type: The type to be removed from the map
     func removeFromMap(type: DashboardButton) {
         
     }
     
+    /// Func to load the mapView and render a different tile collection for it
     func loadMap() {
         let overlay = NightLightOverlay()
         overlay.canReplaceMapContent = true
@@ -116,6 +102,9 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         centerMapOnLocation(location: initialLocation)
     }
     
+    /// Func to center the map on a sepcific location
+    ///
+    /// - Parameter location: The location that will be focused for the mapView
     func centerMapOnLocation(location: CLLocation?) {
         let regionRadius: CLLocationDistance = 2500
         guard let location = location else { return }
@@ -123,6 +112,9 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
+    // MARK: - Get API Functions
+    
+    /// Function to retrive the Pedestrian Counter Locations
     func getCounterLocations() {
         GetPedestrianCounterLocations().dispatch(
             onSuccess: { successResponse in
@@ -141,8 +133,7 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         })
     }
     
-    // MARK: - Get API Functions
-    
+    /// Function to retrieve the statistics for the Pedestrian Counters
     func getCounterStats() {
         GetPedestrianCount().dispatch(
             onSuccess: { successResponse in
@@ -157,11 +148,13 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         })
     }
     
+    /// Function to trigger the two Light API calls (this is done here to prevent any order or execution issues)
     func getLights() {
         getFeatureLights()
         getStreetLights()
     }
     
+    /// Function retrieve the feature lights and their statistics from an external API
     func getFeatureLights() {
         GetFeatureLights().dispatch(
             onSuccess: { successResponse in
@@ -183,6 +176,7 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         })
     }
     
+    /// Function to retrieve the street lights and their statistics from an external API
     func getStreetLights() {
         GetStreetLights().dispatch(
             onSuccess: { successResponse in
@@ -204,6 +198,7 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         })
     }
     
+    /// Function to retrieve Taxi Rank information from an external API
     func getTaxiRanks() {
         GetTaxiRankLocations().dispatch(
             onSuccess: { successResponse in
@@ -225,6 +220,7 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         })
     }
     
+    /// Function retrieve the Camera locations from a locally stored JSON file
     func getCameras() {
         GetCameras().dispatch(
             onSuccess: { successResponse in
@@ -246,6 +242,7 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         })
     }
     
+    /// Function to retrieve the 24Hr Police Stations from a locally stored JSON file
     func getPoliceStations() {
         GetPoliceStations().dispatch(
             onSuccess: { successResponse in
