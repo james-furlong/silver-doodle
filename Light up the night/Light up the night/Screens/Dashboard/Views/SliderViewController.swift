@@ -8,16 +8,24 @@
 
 import UIKit
 
-class SliderViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class SliderViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
+    
+    // MARK: - Properties
     
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var buttonCollectionView: UICollectionView!
+    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchResultTableView: UITableView!
+    
+    // MARK: - Initialisation
     
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonCollectionView.dataSource = self
         buttonCollectionView.delegate = self
+        searchResultTableView.dataSource = self
+        searchResultTableView.delegate = self
         
         let gesture = UIPanGestureRecognizer(target: self, action: #selector(panGesture))
         view.addGestureRecognizer(gesture)
@@ -38,6 +46,8 @@ class SliderViewController: UIViewController, UICollectionViewDelegate, UICollec
             self?.view.frame = CGRect(x: 0, y: yComponent, width: frame.width, height: frame.height)
         }
     }
+    
+    // MARK: - Functions
     
     @objc
     func panGesture(recognizer: UIPanGestureRecognizer) {
@@ -73,6 +83,16 @@ class SliderViewController: UIViewController, UICollectionViewDelegate, UICollec
         )
     }
     
+    @IBAction func searchTextFieldChanged(_ sender: UITextField) {
+        guard let searchTerm = sender.text else { return }
+        guard searchTerm.count >= 3 else { return }
+        guard let parentVc = self.parent as? DashboardViewController else { return }
+        
+        
+    }
+    
+    // MARK: - CollectionView functions
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return DashboardButton.allCases.count
     }
@@ -98,5 +118,15 @@ class SliderViewController: UIViewController, UICollectionViewDelegate, UICollec
             case .police: parent.getPoliceStations()
             default: break
         }
+    }
+    
+    // MARK: - TableView functions
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
     }
 }

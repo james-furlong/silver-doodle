@@ -10,6 +10,8 @@
 		1A0DC0AF22C2F728004C2BD2 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0DC0AE22C2F728004C2BD2 /* UIViewController+Extensions.swift */; };
 		1A0DC0B322C305D8004C2BD2 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0DC0B222C305D8004C2BD2 /* SliderViewController.swift */; };
 		1A0DC0B522C3113E004C2BD2 /* SliderButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0DC0B422C3113E004C2BD2 /* SliderButtonCollectionViewCell.swift */; };
+		1A0DC0B722C40F6D004C2BD2 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0DC0B622C40F6D004C2BD2 /* SearchResultTableViewCell.swift */; };
+		1A0DC0B922C4102E004C2BD2 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0DC0B822C4102E004C2BD2 /* SearchResult.swift */; };
 		1A543F2E22A585FA008EF90B /* FeatureLightingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F2D22A585FA008EF90B /* FeatureLightingResponse.swift */; };
 		1A543F3022A58A6A008EF90B /* GetFeatureLights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F2F22A58A6A008EF90B /* GetFeatureLights.swift */; };
 		1A543F3222A58D31008EF90B /* StreetLightsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A543F3122A58D31008EF90B /* StreetLightsResponse.swift */; };
@@ -52,6 +54,8 @@
 		1A0DC0AE22C2F728004C2BD2 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		1A0DC0B222C305D8004C2BD2 /* SliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SliderViewController.swift; path = Views/SliderViewController.swift; sourceTree = "<group>"; };
 		1A0DC0B422C3113E004C2BD2 /* SliderButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderButtonCollectionViewCell.swift; sourceTree = "<group>"; };
+		1A0DC0B622C40F6D004C2BD2 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		1A0DC0B822C4102E004C2BD2 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		1A543F2D22A585FA008EF90B /* FeatureLightingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureLightingResponse.swift; sourceTree = "<group>"; };
 		1A543F2F22A58A6A008EF90B /* GetFeatureLights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFeatureLights.swift; sourceTree = "<group>"; };
 		1A543F3122A58D31008EF90B /* StreetLightsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetLightsResponse.swift; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 				1AB6B3D922AAE7910012F7D5 /* DashboardCollectionViewCell.xib */,
 				1AB6B3DE22AB041A0012F7D5 /* PointView.swift */,
 				1A0DC0B422C3113E004C2BD2 /* SliderButtonCollectionViewCell.swift */,
+				1A0DC0B622C40F6D004C2BD2 /* SearchResultTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 				1AB71CD022A72ADA00909561 /* NightLightOverlay.swift */,
 				1AB6B3DC22AAEA190012F7D5 /* DashboardButton.swift */,
 				1AB6B3F422ABB7900012F7D5 /* Point.swift */,
+				1A0DC0B822C4102E004C2BD2 /* SearchResult.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -356,6 +362,7 @@
 				1AB6B3F122ABACC10012F7D5 /* GetCameras.swift in Sources */,
 				1AE0B41222A328A800CB2B98 /* AppDelegate.swift in Sources */,
 				1AE0B43822A3362700CB2B98 /* APIRequest.swift in Sources */,
+				1A0DC0B722C40F6D004C2BD2 /* SearchResultTableViewCell.swift in Sources */,
 				1AB6B3BC22A87E7E0012F7D5 /* UIView+Extensions.swift in Sources */,
 				1AB6B3F322ABAD360012F7D5 /* CameraResponse.swift in Sources */,
 				1A543F3222A58D31008EF90B /* StreetLightsResponse.swift in Sources */,
@@ -368,6 +375,7 @@
 				1AB6B3F922AC24130012F7D5 /* GetPoliceStations.swift in Sources */,
 				1AB6B3E822AB5FD80012F7D5 /* GetTaxiRankLocations.swift in Sources */,
 				1AB6B3E622AB5FA80012F7D5 /* TaxiRankResponse.swift in Sources */,
+				1A0DC0B922C4102E004C2BD2 /* SearchResult.swift in Sources */,
 				1AB6B3DF22AB041A0012F7D5 /* PointView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,7 +24,7 @@ class SearchResultTableViewCell: UITableViewCell {
     }
     
     public func updateCell(with result: SearchResult) {
-        
+        self.titleLabel.text = result.fullAddress
     }
 
 }
