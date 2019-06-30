@@ -18,6 +18,8 @@ class SliderViewController: UIViewController, UICollectionViewDelegate, UICollec
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchResultTableView: UITableView!
     
+    private var searchResults = [SearchResult]()
+    
     // MARK: - Initialisation
     
     override func viewDidLoad() {
@@ -86,9 +88,24 @@ class SliderViewController: UIViewController, UICollectionViewDelegate, UICollec
     @IBAction func searchTextFieldChanged(_ sender: UITextField) {
         guard let searchTerm = sender.text else { return }
         guard searchTerm.count >= 3 else { return }
-        guard let parentVc = self.parent as? DashboardViewController else { return }
         
-        
+//        GetAddressSearchResults(with: searchTerm).dispatch(
+//            onSuccess: { searchResults in
+//                searchResults.forEach { [weak self] result in
+//                    self?.searchResults.append(SearchResult(
+//                        streetExtra: nil,
+//                        streetNumber: Int(result.streetNo ?? "0") ?? 0 ,
+//                        streetName: result.strName,
+//                        suburb: result.suburb,
+//                        state: "Victoria",
+//                        postcode: result.postCode,
+//                        country: <#T##String#>)
+//                    )
+//                }
+//        },
+//            onError: { errorResponse, error in
+//
+//        })
     }
     
     // MARK: - CollectionView functions
@@ -123,10 +140,10 @@ class SliderViewController: UIViewController, UICollectionViewDelegate, UICollec
     // MARK: - TableView functions
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        return UITableViewCell()
     }
 }

@@ -11,15 +11,13 @@ import UIKit
 class SliderButtonCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var circleView: UIView!
     @IBOutlet weak var buttonImageView: UIImageView!
     
     func updateCell(with button: DashboardButton) {
         titleLabel.text = button.title
-        subtitleLabel.text = button.subtitle
-        self.backgroundColor = button.backgroundColor
-        titleLabel.textColor = button.tintColor
-        subtitleLabel.textColor = button.tintColor
+        circleView.backgroundColor = button.backgroundColor
+        titleLabel.textColor = .white
         // TODO: Add icons when assests are complete
     }
 }

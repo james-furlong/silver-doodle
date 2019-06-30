@@ -56,17 +56,6 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         )
     }
     
-    // MARK: - Action functions
-    
-    /// Action function to add an address search view to the view controller
-    ///
-    /// - Parameter sender: The button that was tapped
-    @IBAction func searchButtonTapped(_ sender: UIButton) {
-        guard let search = Bundle.main.loadNibNamed("AddressSearch", owner: self, options: nil)?[0] as? AddressSearch else { return }
-        self.view.addSubview(search)
-        self.addressSearchButton.isHidden = true
-    }
-    
     // MARK: - Functions
     
     func addButtonSliderView() {
@@ -82,9 +71,6 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate, MKMa
         view.addSubview(vc.view)
         vc.didMove(toParent: self)
         vc.loadViewIfNeeded()
-        
-//        _ = vc.view
-        
     }
     
     /// Function to add locations to the Map
